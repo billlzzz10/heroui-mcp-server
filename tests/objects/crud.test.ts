@@ -295,6 +295,66 @@ describe("CRUD Operations", () => {
     crud.clear();
     expect(crud.list().length).toBe(0);
   });
+  it("should merge nested metadata updates without dropping fields", () => {
+    const baseObject: Omit<MCPObject, "hash"> = {
+      objectType: "color_palette",
+      name: "Nested Update Source",
+      generationMethod: "manual",
+      baseColor: "#FFFFFF",
+      palette: {
+        primary: "#FF0000",
+        secondary: "#00FF00",
+        accent: "#0000FF",
+        neutral: "#CCCCCC",
+      },
+      semantic: {
+        background: "#FFFFFF",
+        surface: "#F0F0F0",
+        text: {
+          primary: "#333333",
+          secondary: "#666666",
+          disabled: "#999999",
+        },
+        border: {
+          default: "#AAAAAA",
+          subtle: "#DDDDDD",
+        },
+        feedback: {
+          success: "#00FF00",
+          warning: "#FFFF00",
+          error: "#FF0000",
+        },
+      },
+      metadata: {
+        createdAt: new Date().toISOString(),
+        createdBy: "user",
+        tags: ["initial"],
+        usageCount: 5,
+        suitability: {
+          lightMode: true,
+          darkMode: false,
+          highContrast: true,
+        },
+      },
+    };
+
+    const createdObject = crud.create(baseObject);
+    const originalMetadata = createdObject.metadata;
+
+    const updatedObject = crud.update(createdObject.hash, {
+      metadata: {
+        tags: ["updated"],
+      },
+    });
+
+    expect(updatedObject).toBeDefined();
+    expect(updatedObject?.metadata.tags).toEqual(["updated"]);
+    expect(updatedObject?.metadata.createdAt).toBe(originalMetadata.createdAt);
+    expect(updatedObject?.metadata.createdBy).toBe(originalMetadata.createdBy);
+    expect(updatedObject?.metadata.usageCount).toBe(originalMetadata.usageCount);
+    expect(updatedObject?.metadata.suitability).toEqual(originalMetadata.suitability);
+  });
+
 });
 
 

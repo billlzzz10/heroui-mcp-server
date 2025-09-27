@@ -10,11 +10,19 @@ export interface Session {
 
 class SessionManager {
   private sessions: Map<string, Session> = new Map();
-  private MAX_SESSION_AGE_MS = 24 * 60 * 60 * 1000; // 24 hours
+  private readonly MAX_SESSION_AGE_MS = 24 * 60 * 60 * 1000; // 24 hours
+  private readonly cleanupTimer: NodeJS.Timeout;
 
   constructor() {
     // Periodically clean up old sessions
-    setInterval(() => this.cleanupOldSessions(), 60 * 60 * 1000); // Every hour
+    this.cleanupTimer = setInterval(() => this.cleanupOldSessions(), 60 * 60 * 1000); // Every hour
+    if (typeof this.cleanupTimer.unref === 'function') {
+      this.cleanupTimer.unref();
+    }
+  }
+
+  shutdown(): void {
+    clearInterval(this.cleanupTimer);
   }
 
   createSession(initialMetadata?: Record<string, any>): Session {
@@ -72,5 +80,4 @@ class SessionManager {
 }
 
 export const sessionManager = new SessionManager();
-
 

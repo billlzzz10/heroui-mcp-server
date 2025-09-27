@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { MCPObjectSchema, MCPObject } from './schemas';
-import { generateHash } from '../utils/hash'; // Import the utility hash function
+import { generateHash } from '../utils/hash';
+import { deepMerge, DeepPartial } from '../utils/deep-merge';
 
 // In-memory storage for demonstration purposes
 const inMemoryStore: Map<string, MCPObject> = new Map();
@@ -37,12 +38,14 @@ export const crud = {
    * @param updates Partial data to update the object with.
    * @returns The updated MCPObject if found and updated, otherwise undefined.
    */
-  update: (hash: string, updates: Partial<Omit<MCPObject, 'hash'>>): MCPObject | undefined => {
+  update: (hash: string, updates: DeepPartial<Omit<MCPObject, 'hash'>>): MCPObject | undefined => {
     const existingObject = inMemoryStore.get(hash);
     if (!existingObject) {
       return undefined;
     }
-    const updatedObject: MCPObject = { ...existingObject, ...updates };
+
+    const mergedObject = deepMerge<MCPObject>(existingObject, updates as DeepPartial<MCPObject>);
+    const updatedObject: MCPObject = { ...mergedObject, hash: existingObject.hash };
     const validationResult = MCPObjectSchema.safeParse(updatedObject);
     if (!validationResult.success) {
       throw new Error(`Validation failed: ${validationResult.error.message}`);
@@ -75,4 +78,13 @@ export const crud = {
     inMemoryStore.clear();
   },
 };
+
+
+
+
+
+
+
+
+
 

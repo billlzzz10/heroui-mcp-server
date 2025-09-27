@@ -1,26 +1,36 @@
 import { z } from 'zod';
 import { Tool } from '../../server/registry';
+import { crud } from '../../objects/crud';
+import { LayoutCompositionObjectSchema, LayoutCompositionObject } from '../../objects/schemas';
 
 export const inputSchema = z.object({
-  layoutId: z.string().describe("The ID of the layout to operate on."),
-  action: z.string().describe("The action to perform on the layout."),
+  hash: z.string().describe('Hash of the layout composition to retrieve.'),
 });
 
 export const outputSchema = z.object({
-  status: z.string().describe("The status of the layout operation."),
-  details: z.string().optional().describe("Additional details about the operation."),
+  layout: LayoutCompositionObjectSchema.describe('Validated layout composition object associated with the hash.'),
 });
 
 export const HERO_LAYOUT_PLACEHOLDER_01: Tool = {
-  id: "HERO_LAYOUT_PLACEHOLDER_01",
-  name: "Layout Placeholder Tool 01",
-  description: "A placeholder tool for layout operations.",
-  inputSchema: inputSchema,
-  outputSchema: outputSchema,
+  id: 'HERO_LAYOUT_PLACEHOLDER_01',
+  name: 'Fetch Layout Composition',
+  description: 'Loads a stored layout composition from the CRUD store and validates the structure.',
+  inputSchema,
+  outputSchema,
   execute: async (input: z.infer<typeof inputSchema>) => {
-    console.log(`HERO_LAYOUT_PLACEHOLDER_01 executed on layout ${input.layoutId} with action: ${input.action}`);
-    return { status: "success", details: `Action '${input.action}' performed on layout ${input.layoutId}` };
+    const existing = crud.read(input.hash);
+    if (!existing) {
+      throw new Error(`No MCP object found for hash ${input.hash}`);
+    }
+    if (existing.objectType !== 'layout_composition') {
+      throw new Error(`Object ${input.hash} is a ${existing.objectType}, not a layout_composition.`);
+    }
+
+    const validation = LayoutCompositionObjectSchema.safeParse(existing);
+    if (!validation.success) {
+      throw new Error(`Layout composition failed validation: ${validation.error.message}`);
+    }
+
+    return { layout: validation.data as LayoutCompositionObject };
   },
 };
-
-

@@ -33,6 +33,30 @@ class ToolRegistry {
   unregisterTool(id: string): boolean {
     return this.tools.delete(id);
   }
+
+  async executeTool(id: string, rawInput: unknown): Promise<{ tool: Tool; input: unknown; output: unknown }> {
+    const tool = this.getTool(id);
+    if (!tool) {
+      throw new Error(`Tool with ID ${id} is not registered.`);
+    }
+
+    const parseWithSchema = (schema: unknown, payload: unknown) => {
+      if (schema && typeof (schema as any).parse === 'function') {
+        return (schema as { parse: (data: unknown) => unknown }).parse(payload);
+      }
+      return payload;
+    };
+
+    const parsedInput = parseWithSchema(tool.inputSchema, rawInput);
+    const executionResult = await Promise.resolve(tool.execute(parsedInput));
+    const parsedOutput = parseWithSchema(tool.outputSchema, executionResult);
+
+    return {
+      tool,
+      input: parsedInput,
+      output: parsedOutput,
+    };
+  }
 }
 
 export const toolRegistry = new ToolRegistry();
@@ -245,5 +269,8 @@ toolRegistry.registerTool(HERO_UTIL_SHARED_ICONS_01);
 toolRegistry.registerTool(HERO_UTIL_SHARED_UTILS_01);
 toolRegistry.registerTool(HERO_UTIL_STORIES_UTILS_01);
 toolRegistry.registerTool(HERO_UTIL_TEST_UTILS_01);
+
+
+
 
 
