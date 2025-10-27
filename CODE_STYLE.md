@@ -1,4 +1,4 @@
-# MCP "Everything" Server - Development Guidelines
+# MCP "heroui" Server - Development Guidelines
 
 ## Build, Test & Run Commands
 - Build: `npm run build` - Compiles TypeScript to JavaScript
