@@ -306,3 +306,4 @@ generated-images/
 
 # Husky
 .husky/_
+package-lock.json
