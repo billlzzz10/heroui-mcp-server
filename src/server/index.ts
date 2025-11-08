@@ -6,6 +6,7 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
+import { HEROUI_SYSTEM_PROMPT, getSystemPromptForTool } from './system-prompt.js';
 
 // Import all tools
 import {

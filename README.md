@@ -1,14 +1,37 @@
 # HeroUI MCP Server
 
-🚀 **HeroUI MCP Server** เป็น Model Context Protocol (MCP) server ที่ออกแบบมาเพื่อช่วยในการสร้างและจัดการ UI components อย่างมีประสิทธิภาพ
+<div align="center">
+  <img src="./public/heroui-logo.jpeg" alt="HeroUI Logo" width="200" height="200" style="border-radius: 20px;">
+  
+  🚀 **HeroUI MCP Server** เป็น Model Context Protocol (MCP) server ที่ออกแบบมาเพื่อช่วยในการสร้างและจัดการ UI components อย่างมีประสิทธิภาพ
+
+  [![Demo](https://img.shields.io/badge/🎮_Live_Demo-blue?style=for-the-badge)](./public/demo.html)
+  [![Templates](https://img.shields.io/badge/📋_4_Templates-green?style=for-the-badge)](#เทมเพลตที่มี)
+  [![Colors](https://img.shields.io/badge/🎨_5_Color_Schemes-purple?style=for-the-badge)](#ชุดสีที่มี)
+</div>
+
+## 🎬 Demo Examples
+
+### Landing Page Template
+<img src="./public/blink-ai-landing-page-example.jpg" alt="Blink AI Landing Page Example" width="600">
+
+*ตัวอย่างหน้า Landing Page ที่สร้างด้วย `create_landing_template`*
+
+### Dashboard Template  
+<img src="./public/smithery-api-dashboard-example.png" alt="Smithery API Dashboard Example" width="600">
+
+*ตัวอย่างหน้า Dashboard ที่สร้างด้วย `create_dashboard_template`*
 
 ## 📋 สารบัญ
 
+- [🎯 Project Goals & Progress](./PROJECT_GOALS.md)
+- [🤖 System Prompt](./SYSTEM_PROMPT.md) - **AI Assistant Guide**
 - [คุณสมบัติหลัก](#คุณสมบัติหลัก)
 - [การติดตั้ง](#การติดตั้ง)
 - [การใช้งาน MCP](#การใช้งาน-mcp)
 - [Tools Available](#tools-available)
 - [การพัฒนา](#การพัฒนา)
+- [📚 เอกสารเพิ่มเติม](./docs/README.md)
 
 ## ✨ คุณสมบัติหลัก
 

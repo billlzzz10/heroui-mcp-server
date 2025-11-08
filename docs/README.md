@@ -1,6 +1,9 @@
-# HeroUI MCP Server Documentation
+# 📚 HeroUI MCP Server Documentation
 
-ยินดีต้อนรับสู่เอกสารประกอบของ HeroUI MCP Server! 📚
+## 🎯 Quick Links
+- [📊 Project Goals & Progress](../PROJECT_GOALS.md) - **เป้าหมาย 60 tools!**
+- [🎮 Live Demo](../public/demo.html) - ทดลองใช้งาน
+- [🚀 Quick Start](./Getting%20Started%20with%20HeroUI%20MCP%20Server.md) - เริ่มต้นใช้งาน
 
 ## 📋 เอกสารทั้งหมด
 

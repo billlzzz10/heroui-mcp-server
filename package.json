@@ -1,6 +1,6 @@
 {
   "name": "heroui-mcp-server",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "type": "module",
   "description": "🚀 HeroUI MCP Server - A Model Context Protocol server for creating and managing UI components efficiently",
   "main": "dist/server/index.js",

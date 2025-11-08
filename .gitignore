@@ -18,6 +18,67 @@ coverage/
 # nyc test coverage
 .nyc_output
 
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Cache directories
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+
+# GitBook build
+_book/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# MCP specific
+data/cache/
+data/objects/
+data/templates/
+
+# Demo artifacts
+demo-artifacts.html
+create-demo-gif.js
+test-mcp.js
+quick-demo.bat
+demo-setup.md
+
+# Smithery
+smithery-project/
+
 # Grunt intermediate storage
 .grunt
 
