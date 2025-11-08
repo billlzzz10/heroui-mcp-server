@@ -1,0 +1,142 @@
+{
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "aiService": {
+        "type": "string",
+        "enum": ["openai", "anthropic", "disabled"],
+        "default": "disabled",
+        "description": "AI service provider for component generation"
+      },
+      "openaiApiKey": {
+        "type": "string",
+        "description": "OpenAI API key for AI-powered component generation"
+      },
+      "openaiModel": {
+        "type": "string",
+        "default": "gpt-3.5-turbo",
+        "description": "OpenAI model to use (gpt-3.5-turbo, gpt-4, etc.)"
+      },
+      "anthropicApiKey": {
+        "type": "string",
+        "description": "Anthropic API key for Claude-powered generation"
+      },
+      "anthropicModel": {
+        "type": "string",
+        "default": "claude-3-haiku-20240307",
+        "description": "Anthropic model to use"
+      },
+      "defaultVariant": {
+        "type": "string",
+        "enum": ["primary", "secondary", "success", "danger", "warning", "info"],
+        "default": "primary",
+        "description": "Default button variant for generated components"
+      },
+      "defaultSize": {
+        "type": "string",
+        "enum": ["small", "medium", "large"],
+        "default": "medium",
+        "description": "Default size for generated components"
+      },
+      "cssFramework": {
+        "type": "string",
+        "enum": ["tailwind", "bootstrap", "custom"],
+        "default": "tailwind",
+        "description": "CSS framework to use for styling"
+      },
+      "theme": {
+        "type": "string",
+        "enum": ["light", "dark", "auto"],
+        "default": "light",
+        "description": "UI theme preference"
+      },
+      "primaryColor": {
+        "type": "string",
+        "default": "#007bff",
+        "description": "Primary color for components (hex code)"
+      },
+      "borderRadius": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 20,
+        "default": 6,
+        "description": "Default border radius in pixels"
+      },
+      "enableResponsive": {
+        "type": "boolean",
+        "default": true,
+        "description": "Enable responsive design by default"
+      },
+      "enableAccessibility": {
+        "type": "boolean",
+        "default": true,
+        "description": "Include accessibility attributes (ARIA, etc.)"
+      },
+      "enableAnimations": {
+        "type": "boolean",
+        "default": true,
+        "description": "Include CSS transitions and animations"
+      },
+      "sessionTimeout": {
+        "type": "number",
+        "minimum": 300,
+        "maximum": 86400,
+        "default": 3600,
+        "description": "Session timeout in seconds"
+      },
+      "maxComponentsPerSession": {
+        "type": "number",
+        "minimum": 10,
+        "maximum": 1000,
+        "default": 100,
+        "description": "Maximum components per session"
+      },
+      "enableLearning": {
+        "type": "boolean",
+        "default": true,
+        "description": "Enable learning system to improve suggestions"
+      },
+      "enableFeedback": {
+        "type": "boolean",
+        "default": true,
+        "description": "Enable feedback collection for improvement"
+      },
+      "temperature": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 2,
+        "default": 0.7,
+        "description": "AI creativity level (0=conservative, 2=creative)"
+      },
+      "maxTokens": {
+        "type": "number",
+        "minimum": 100,
+        "maximum": 4000,
+        "default": 2000,
+        "description": "Maximum tokens for AI responses"
+      },
+      "enableDebug": {
+        "type": "boolean",
+        "default": false,
+        "description": "Enable debug logging"
+      },
+      "includeComments": {
+        "type": "boolean",
+        "default": true,
+        "description": "Include helpful comments in generated code"
+      },
+      "minifyOutput": {
+        "type": "boolean",
+        "default": false,
+        "description": "Minify generated CSS/HTML output"
+      },
+      "outputFormat": {
+        "type": "string",
+        "enum": ["html", "jsx", "vue", "svelte"],
+        "default": "html",
+        "description": "Preferred output format for components"
+      }
+    },
+    "required": []
+  }
+}
