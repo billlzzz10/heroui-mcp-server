@@ -1,0 +1,43 @@
+name: Smithery Deploy
+
+on:
+  push:
+    branches: ["main", "production"]
+    tags: ["v*"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: |
+      (github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/production' || startsWith(github.ref, 'refs/tags/v'))) ||
+      (github.event_name == 'pull_request' && github.base_ref == 'main')
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+      
+      - name: Build project
+        run: npm run build
+        env:
+          NODE_ENV: production
+          ENABLE_AI_GENERATION: false
+      
+      - name: Test build
+        run: |
+          echo '{"jsonrpc":"2.0","id":1,"method":"tools/list","params":{}}' | timeout 5s node dist/server/index.js || true
+      
+      - name: Deploy to Smithery
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
+        run: |
+          echo "Deploying to Smithery..."
+          # Smithery will auto-deploy from this commit

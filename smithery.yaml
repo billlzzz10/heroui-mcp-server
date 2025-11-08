@@ -1,1 +1,36 @@
-runtime: typescript
+runtime: "typescript"
+target: "local"
+
+# Environment Variables for Smithery
+environment:
+  NODE_ENV: "production"
+  LOG_LEVEL: "info"
+  
+  # AI Services (Optional - will work without these)
+  OPENAI_API_KEY: "${OPENAI_API_KEY}"
+  ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY}"
+  
+  # Basic Configuration
+  PORT: "3000"
+  HOST: "0.0.0.0"
+  
+  # Feature Flags
+  ENABLE_AI_GENERATION: "false"  # Disable AI features if no API keys
+  ENABLE_WEBSOCKETS: "false"
+  ENABLE_METRICS: "false"
+
+# Build Configuration
+build:
+  # Only build on specific conditions
+  triggers:
+    - push:
+        branches: ["main", "production"]
+        tags: ["v*"]
+    - pull_request:
+        branches: ["main"]
+
+# Health Check
+healthCheck:
+  path: "/health"
+  timeout: 30s
+  interval: 30s

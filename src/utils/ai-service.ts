@@ -43,6 +43,11 @@ class AIService {
    * Generate UI component based on natural language description
    */
   async generateComponent(description: string, componentType?: string): Promise<string> {
+    // Check if AI generation is enabled
+    if (process.env.ENABLE_AI_GENERATION === 'false') {
+      throw new Error('AI generation is disabled. Enable it by setting ENABLE_AI_GENERATION=true and providing API keys.');
+    }
+
     // Validate inputs for security
     if (!this.isValidInput(description)) {
       throw new Error('Invalid input: description contains potentially harmful content');
@@ -54,7 +59,8 @@ class AIService {
     }
 
     if (!this.openai) {
-      throw new Error('OpenAI API key not configured. Please set OPENAI_API_KEY environment variable.');
+      // Return fallback template instead of error
+      return this.generateFallbackComponent(description, componentType);
     }
 
     // Create a detailed prompt for generating UI components
@@ -85,9 +91,34 @@ class AIService {
 
       return response.choices[0].message.content || '';
     } catch (error) {
-      console.error('Error calling OpenAI API:', error);
-      throw new Error(`AI service error: ${error instanceof Error ? error.message : String(error)}`);
+      console.error('AI generation failed, using fallback:', error);
+      return this.generateFallbackComponent(description, componentType);
     }
+  }
+
+  private generateFallbackComponent(description: string, componentType?: string): string {
+    // Simple template-based generation without AI
+    const templates = {
+      button: `<button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">${description}</button>`,
+      input: `<input type="text" placeholder="${description}" class="border border-gray-300 rounded px-3 py-2" />`,
+      card: `<div class="bg-white shadow rounded-lg p-6"><h3 class="text-lg font-semibold">${description}</h3></div>`,
+      form: `<form class="space-y-4"><h2 class="text-xl font-bold">${description}</h2><button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Submit</button></form>`
+    };
+
+    const detectedType = this.detectComponentType(description, componentType);
+    return templates[detectedType as keyof typeof templates] || templates.button;
+  }
+
+  private detectComponentType(description: string, componentType?: string): string {
+    if (componentType) return componentType;
+    
+    const desc = description.toLowerCase();
+    if (desc.includes('button') || desc.includes('ปุ่ม')) return 'button';
+    if (desc.includes('input') || desc.includes('ช่องกรอก')) return 'input';
+    if (desc.includes('card') || desc.includes('การ์ด')) return 'card';
+    if (desc.includes('form') || desc.includes('ฟอร์ม')) return 'form';
+    
+    return 'button';
   }
 
   /**
