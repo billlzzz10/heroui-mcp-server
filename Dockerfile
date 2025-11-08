@@ -15,23 +15,20 @@ RUN npm install --legacy-peer-deps && npm cache clean --force
 # Development stage
 FROM base AS development
 
-# Install all dependencies including dev dependencies
-RUN npm install --legacy-peer-deps
-
 # Copy source code
 COPY . .
+
+# Build the application
+RUN npm run build
 
 # Expose port
 EXPOSE 3000
 
 # Start development server
-CMD ["npm", "run", "dev"]
+CMD ["node", "dist/server/index.js"]
 
 # Build stage
 FROM base AS build
-
-# Install all dependencies
-RUN npm install --legacy-peer-deps
 
 # Copy source code
 COPY . .
@@ -57,7 +54,7 @@ RUN npm install --only=production --legacy-peer-deps && npm cache clean --force
 
 # Copy built application from build stage
 COPY --from=build --chown=heroui:nodejs /app/dist ./dist
-COPY --from=build --chown=heroui:nodejs /app/docs ./docs
+COPY --from=build --chown=heroui:nodejs /app/package.json ./package.json
 
 # Create necessary directories
 RUN mkdir -p data/cache data/objects data/templates logs && \
@@ -69,23 +66,5 @@ USER heroui
 # Expose port
 EXPOSE 3000
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD node dist/scripts/health-check.js
-
 # Start the application
 CMD ["node", "dist/server/index.js"]
-
-# Multi-stage build for different environments
-FROM production AS production-slim
-
-# Remove unnecessary files for minimal image
-RUN rm -rf docs
-
-# Labels for metadata
-LABEL maintainer="HeroUI Team <team@heroui.dev>"
-LABEL version="1.0.0"
-LABEL description="HeroUI MCP Server - A Model Context Protocol server for UI components"
-LABEL org.opencontainers.image.source="https://github.com/heroui/mcp-server"
-LABEL org.opencontainers.image.documentation="https://docs.heroui.dev"
-LABEL org.opencontainers.image.licenses="ISC"
