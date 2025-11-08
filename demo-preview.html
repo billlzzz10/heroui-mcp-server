@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeroUI MCP Demo Preview</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .demo { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .demo h3 { color: #333; margin-top: 0; }
+        .code { background: #f8f8f8; padding: 10px; border-radius: 4px; font-family: monospace; margin: 10px 0; }
+        .result { border: 1px solid #ddd; padding: 15px; margin: 10px 0; border-radius: 4px; }
+        .btn { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        .btn:hover { background: #0056b3; }
+        .input { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin: 5px 0; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+        .grid-item { background: #e9ecef; padding: 10px; text-align: center; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>🚀 HeroUI MCP Demo Preview</h1>
+    <p>ตัวอย่างผลลัพธ์ที่จะได้จากการใช้ HeroUI MCP Server</p>
+
+    <div class="demo">
+        <h3>1. Button Component</h3>
+        <div class="code">create_button text="Click Me!" variant="primary" size="large"</div>
+        <div class="result">
+            <button class="btn" style="font-size: 18px; padding: 12px 24px;">Click Me!</button>
+        </div>
+        <p><strong>ได้:</strong> HTML + CSS ที่พร้อมใช้งาน</p>
+    </div>
+
+    <div class="demo">
+        <h3>2. Input Component</h3>
+        <div class="code">create_input placeholder="ใส่ชื่อของคุณ" type="text" label="ชื่อ" required=true</div>
+        <div class="result">
+            <label>ชื่อ *</label>
+            <input class="input" type="text" placeholder="ใส่ชื่อของคุณ" required>
+        </div>
+        <p><strong>ได้:</strong> Input field พร้อม validation</p>
+    </div>
+
+    <div class="demo">
+        <h3>3. Grid Layout</h3>
+        <div class="code">create_grid columns=3 gap="1rem" items='["Item 1","Item 2","Item 3"]'</div>
+        <div class="result">
+            <div class="grid">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+            </div>
+        </div>
+        <p><strong>ได้:</strong> Responsive CSS Grid</p>
+    </div>
+
+    <div class="demo">
+        <h3>4. MindMap Component</h3>
+        <div class="code">create_mindmap nodes='[{"id":"root","title":"HeroUI Demo"}]' layout="tree-right"</div>
+        <div class="result">
+            <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+                <div style="display: inline-block; background: #007bff; color: white; padding: 10px 20px; border-radius: 20px; margin: 10px;">
+                    HeroUI Demo
+                </div>
+                <div style="margin: 10px 0;">↓</div>
+                <div style="display: inline-block; background: #28a745; color: white; padding: 8px 16px; border-radius: 15px; margin: 5px;">
+                    Interactive
+                </div>
+                <div style="display: inline-block; background: #ffc107; color: black; padding: 8px 16px; border-radius: 15px; margin: 5px;">
+                    Components
+                </div>
+            </div>
+        </div>
+        <p><strong>ได้:</strong> Interactive mindmap diagram</p>
+    </div>
+
+    <div class="demo" style="background: #e8f5e8;">
+        <h3>📋 สิ่งที่จะเห็นใน Demo Video</h3>
+        <ul>
+            <li>✅ การรัน MCP Server</li>
+            <li>✅ การเชื่อมต่อกับ Claude Desktop</li>
+            <li>✅ การใช้คำสั่ง MCP tools</li>
+            <li>✅ ผลลัพธ์ HTML/CSS ที่ได้</li>
+            <li>✅ การ copy-paste code ไปใช้</li>
+            <li>✅ Live preview ใน browser</li>
+        </ul>
+    </div>
+
+    <div class="demo" style="background: #fff3cd;">
+        <h3>🎬 ขั้นตอนการถ่าย</h3>
+        <ol>
+            <li>เปิด Terminal → รัน <code>npm run dev</code></li>
+            <li>เปิด Claude Desktop → เชื่อมต่อ MCP</li>
+            <li>ทดสอบ create_button</li>
+            <li>ทดสอบ create_input</li>
+            <li>ทดสอบ create_grid</li>
+            <li>ทดสอบ create_mindmap</li>
+            <li>แสดงการใช้งานจริง</li>
+        </ol>
+    </div>
+</body>
+</html>

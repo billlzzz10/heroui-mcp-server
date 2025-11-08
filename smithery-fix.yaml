@@ -1,0 +1,3 @@
+# Smithery Configuration for HeroUI MCP Server
+runtime: "typescript"
+target: "local"  # Beta: Local server distribution

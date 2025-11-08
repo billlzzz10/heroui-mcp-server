@@ -6,46 +6,38 @@
 
 - [คุณสมบัติหลัก](#คุณสมบัติหลัก)
 - [การติดตั้ง](#การติดตั้ง)
-- [การใช้งาน](#การใช้งาน)
-- [โครงสร้างโปรเจ้ค](#โครงสร้างโปรเจ้ค)
-- [API Documentation](#api-documentation)
+- [การใช้งาน MCP](#การใช้งาน-mcp)
+- [Tools Available](#tools-available)
 - [การพัฒนา](#การพัฒนา)
-- [การมีส่วนร่วม](#การมีส่วนร่วม)
-- [License](#license)
 
 ## ✨ คุณสมบัติหลัก
 
 ### 🎨 UI Components
-- **Components**: ชุด UI components ที่หลากหลาย (16 components)
-- **Layout**: ระบบ layout ที่ยืดหยุ่น (5 layouts)
-- **Theme**: ระบบ theme ที่ปรับแต่งได้ (4 themes)
-- **Canvas**: เครื่องมือสำหรับการวาดและแสดงผล (6 canvas tools)
+- **Button Components**: สร้าง button ด้วย variants ต่างๆ
+- **Input Components**: สร้าง input fields พร้อม validation
+- **MindMap Components**: สร้าง interactive mindmap
+
+### 🤖 AI-Powered Generation
+- **Natural Language Component Creation**: สร้าง components จากคำอธิบายด้วยภาษาธรรมชาติ
+- **Smart Component Suggestions**: แนะนำ components ตามบริบท
+- **Auto-Generated Forms, Buttons, Layouts**: สร้าง component ที่ซับซ้อนได้อัตโนมัติ
 
 ### 🔧 Advanced Features
-- **Advanced Tools**: เครื่องมือขั้นสูง (12 tools)
-- **Templates**: เทมเพลตสำเร็จรูป (6 templates)
-- **MindMap System**: ระบบแปลง Markdown ↔ Outline ↔ MindMap
-- **Memory Management**: ระบบจัดการหน่วยความจำ
-- **Object Storage**: ระบบจัดเก็บข้อมูล
-
-### 🛠️ Technical Features
-- **TypeScript**: พัฒนาด้วย TypeScript เพื่อความปลอดภัยของ type
-- **Fastify**: ใช้ Fastify framework สำหรับประสิทธิภาพสูง
-- **Zod**: ใช้ Zod สำหรับ schema validation
-- **MCP Protocol**: รองรับ Model Context Protocol
+- **Markdown Parser**: แปลง Markdown เป็น Outline structure
+- **MindMap Converter**: แปลง Outline เป็น MindMap
+- **Layout System**: สร้าง responsive layouts
 
 ## 🚀 การติดตั้ง
 
 ### ข้อกำหนดระบบ
 - Node.js >= 18.0.0
-- npm หรือ yarn
-- TypeScript >= 5.9.2
+- MCP-compatible client (เช่น Claude Desktop)
 
 ### ขั้นตอนการติดตั้ง
 
 1. **Clone repository**
 ```bash
-git clone <repository-url>
+git clone https://github.com/billlzzz10/heroui-mcp-server.git
 cd heroui-mcp-server
 ```
 
@@ -59,46 +51,100 @@ npm install
 npm run build
 ```
 
-4. **รันเซิร์ฟเวอร์**
+## 💻 การใช้งาน MCP
+
+### 1. เพิ่มใน MCP Client Configuration
+
+สำหรับ Claude Desktop, เพิ่มใน `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "heroui": {
+      "command": "node",
+      "args": ["/path/to/heroui-mcp-server/dist/server/index.js"],
+      "cwd": "/path/to/heroui-mcp-server"
+    }
+  }
+}
+```
+
+### 2. รัน MCP Server
+
 ```bash
-npm start
+# Development mode
+npm run dev
+
+# Production mode
+npm run build && npm start
 ```
 
-## 💻 การใช้งาน
+### 3. ใช้งานผ่าน MCP Client
 
-### การเริ่มต้นใช้งาน
+```
+# สร้าง button
+create_button text="Click Me" variant="primary" size="large"
 
-```typescript
-import { HeroUIServer } from './src/server';
+# Parse markdown
+parse_markdown markdown="# Project\n## Tasks\n- [ ] Setup\n- [x] Done"
 
-const server = new HeroUIServer();
-await server.start();
+# สร้าง mindmap
+create_mindmap nodes='[{"id":"root","title":"Project","role":"concept"}]' layout="tree-right"
 ```
 
-### การใช้งาน Components
+## 🛠️ Tools Available
+
+### Component Tools
+- `create_button` - สร้าง button component
+- `create_input` - สร้าง input component  
+- `create_mindmap` - สร้าง interactive mindmap
+
+### Layout Tools
+- `create_grid` - สร้าง CSS grid layout
+
+### AI-Powered Tools
+- `generate_component` - สร้าง component จากคำอธิบายด้วยภาษาธรรมชาติ
+- `generate_button` - สร้าง button component ด้วย AI
+- `generate_form` - สร้าง form component ด้วย AI
+- `generate_layout` - สร้าง layout component ด้วย AI
+
+### Advanced Tools
+- `parse_markdown` - แปลง Markdown เป็น Outline
+- `convert_to_mindmap` - แปลง Outline เป็ MindMap
+
+## 🔧 การพัฒนา
+
+### การเพิ่ม Tool ใหม่
+
+1. สร้างไฟล์ใน `src/tools/[category]/`
+2. เพิ่มใน `index.ts` ของ category นั้น
+3. Build และทดสอบ
 
 ```typescript
-// ตัวอย่างการใช้งาน Button component
-import { HERO_CMP_01 } from './src/tools/components/HERO_CMP_01';
-
-const button = HERO_CMP_01.createButton({
-  text: 'Click Me',
-  variant: 'primary',
-  size: 'medium'
-});
+// ตัวอย่าง tool ใหม่
+{
+  name: 'my_tool',
+  description: 'My custom tool',
+  inputSchema: {
+    type: 'object',
+    properties: {
+      input: { type: 'string' }
+    }
+  },
+  execute: async (args) => {
+    return { result: 'success' };
+  }
+}
 ```
 
-### การใช้งาน Layout
+### การทดสอบ
 
-```typescript
-// ตัวอย่างการใช้งาน Grid layout
-import { HERO_LAY_01 } from './src/tools/layout/HERO_LAY_01';
+```bash
+# รัน tests
+npm test
 
-const gridLayout = HERO_LAY_01.createGrid({
-  columns: 3,
-  gap: '1rem',
-  responsive: true
-});
+# ทดสอบ MCP server
+echo '{"jsonrpc":"2.0","id":1,"method":"tools/list","params":{}}' | node dist/server/index.js
 ```
 
 ## 📁 โครงสร้างโปรเจ้ค

@@ -19,6 +19,7 @@
 
 ## Guides
 * [Examples](docs/EXAMPLES.md)
+* [AI-Powered Generation](docs/ai-powered-generation.md)
 * [Best Practices](docs/best-practices.md)
 * [Performance](docs/performance.md)
 * [Security](docs/security.md)

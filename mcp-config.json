@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "heroui": {
+      "command": "node",
+      "args": ["dist/server/index.js"],
+      "cwd": ".",
+      "env": {}
+    }
+  }
+}

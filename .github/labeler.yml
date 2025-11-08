@@ -1,0 +1,33 @@
+documentation:
+  - '**/*.md'
+  - 'docs/**/*'
+
+dependencies:
+  - 'package*.json'
+  - 'yarn.lock'
+
+tests:
+  - 'tests/**/*'
+  - '**/*.test.ts'
+  - '**/*.spec.ts'
+
+components:
+  - 'src/tools/components/**/*'
+
+layout:
+  - 'src/tools/layout/**/*'
+
+theme:
+  - 'src/tools/theme/**/*'
+
+canvas:
+  - 'src/tools/canvas/**/*'
+
+server:
+  - 'src/server/**/*'
+
+ci/cd:
+  - '.github/**/*'
+  - 'docker*'
+  - '*.yml'
+  - '*.yaml'

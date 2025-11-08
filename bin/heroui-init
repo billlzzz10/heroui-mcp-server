@@ -1,0 +1,85 @@
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
+const path = require('path');
+
+const projectName = process.argv[2];
+
+if (!projectName) {
+  console.log('Usage: heroui-init <PROJECT_NAME>');
+  console.log('Example: heroui-init my-ui-server');
+  process.exit(1);
+}
+
+// Clone template and initialize
+try {
+  console.log(`🚀 Creating ${projectName}...`);
+  
+  execSync(`git clone https://github.com/billlzzz10/heroui-mcp-server.git ${projectName}`, { stdio: 'inherit' });
+  
+  process.chdir(projectName);
+  
+  // Remove git history
+  execSync('rm -rf .git', { stdio: 'inherit' });
+  
+  // Update package.json
+  const fs = require('fs');
+  const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+  pkg.name = projectName;
+  pkg.description = `${projectName} - HeroUI MCP Server`;
+  fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2));
+  
+  // Update README
+  const readme = `# ${projectName}
+
+HeroUI MCP Server project
+
+## Quick Start
+
+\`\`\`bash
+npm install
+npm run build
+npm start
+\`\`\`
+
+## MCP Configuration
+
+\`\`\`json
+{
+  "mcpServers": {
+    "${projectName}": {
+      "command": "node",
+      "args": ["$(pwd)/dist/server/index.js"],
+      "cwd": "$(pwd)"
+    }
+  }
+}
+\`\`\`
+`;
+  
+  fs.writeFileSync('README.md', readme);
+  
+  // Update MCP config
+  const mcpConfig = {
+    mcpServers: {
+      [projectName]: {
+        command: 'node',
+        args: ['dist/server/index.js'],
+        cwd: '.'
+      }
+    }
+  };
+  
+  fs.writeFileSync('mcp-config.json', JSON.stringify(mcpConfig, null, 2));
+  
+  console.log(`✅ ${projectName} created successfully!`);
+  console.log(`\n🚀 Next steps:`);
+  console.log(`cd ${projectName}`);
+  console.log(`npm install`);
+  console.log(`npm run build`);
+  console.log(`npm start`);
+  
+} catch (error) {
+  console.error('❌ Error creating project:', error.message);
+  process.exit(1);
+}
