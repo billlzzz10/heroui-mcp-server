@@ -25,13 +25,13 @@ RUN apk add --no-cache \
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci --only=production && npm cache clean --force
+RUN npm install --legacy-peer-deps && npm cache clean --force
 
 # Development stage
 FROM base AS development
 
 # Install all dependencies including dev dependencies
-RUN npm ci
+RUN npm install --legacy-peer-deps
 
 # Copy source code
 COPY . .
@@ -46,7 +46,7 @@ CMD ["npm", "run", "dev"]
 FROM base AS build
 
 # Install all dependencies
-RUN npm ci
+RUN npm install --legacy-peer-deps
 
 # Copy source code
 COPY . .
@@ -80,7 +80,7 @@ RUN addgroup -g 1001 -S nodejs && \
 COPY package*.json ./
 
 # Install production dependencies
-RUN npm ci --only=production && npm cache clean --force
+RUN npm install --only=production --legacy-peer-deps && npm cache clean --force
 
 # Copy built application from build stage
 COPY --from=build --chown=heroui:nodejs /app/dist ./dist
