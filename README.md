@@ -1,0 +1,266 @@
+# HeroUI MCP Server
+
+🚀 **HeroUI MCP Server** เป็น Model Context Protocol (MCP) server ที่ออกแบบมาเพื่อช่วยในการสร้างและจัดการ UI components อย่างมีประสิทธิภาพ
+
+## 📋 สารบัญ
+
+- [คุณสมบัติหลัก](#คุณสมบัติหลัก)
+- [การติดตั้ง](#การติดตั้ง)
+- [การใช้งาน](#การใช้งาน)
+- [โครงสร้างโปรเจ้ค](#โครงสร้างโปรเจ้ค)
+- [API Documentation](#api-documentation)
+- [การพัฒนา](#การพัฒนา)
+- [การมีส่วนร่วม](#การมีส่วนร่วม)
+- [License](#license)
+
+## ✨ คุณสมบัติหลัก
+
+### 🎨 UI Components
+- **Components**: ชุด UI components ที่หลากหลาย (16 components)
+- **Layout**: ระบบ layout ที่ยืดหยุ่น (5 layouts)
+- **Theme**: ระบบ theme ที่ปรับแต่งได้ (4 themes)
+- **Canvas**: เครื่องมือสำหรับการวาดและแสดงผล (6 canvas tools)
+
+### 🔧 Advanced Features
+- **Advanced Tools**: เครื่องมือขั้นสูง (11 tools)
+- **Templates**: เทมเพลตสำเร็จรูป (6 templates)
+- **Memory Management**: ระบบจัดการหน่วยความจำ
+- **Object Storage**: ระบบจัดเก็บข้อมูล
+
+### 🛠️ Technical Features
+- **TypeScript**: พัฒนาด้วย TypeScript เพื่อความปลอดภัยของ type
+- **Fastify**: ใช้ Fastify framework สำหรับประสิทธิภาพสูง
+- **Zod**: ใช้ Zod สำหรับ schema validation
+- **MCP Protocol**: รองรับ Model Context Protocol
+
+## 🚀 การติดตั้ง
+
+### ข้อกำหนดระบบ
+- Node.js >= 18.0.0
+- npm หรือ yarn
+- TypeScript >= 5.9.2
+
+### ขั้นตอนการติดตั้ง
+
+1. **Clone repository**
+```bash
+git clone <repository-url>
+cd heroui-mcp-server
+```
+
+2. **ติดตั้ง dependencies**
+```bash
+npm install
+```
+
+3. **Build โปรเจ้ค**
+```bash
+npm run build
+```
+
+4. **รันเซิร์ฟเวอร์**
+```bash
+npm start
+```
+
+## 💻 การใช้งาน
+
+### การเริ่มต้นใช้งาน
+
+```typescript
+import { HeroUIServer } from './src/server';
+
+const server = new HeroUIServer();
+await server.start();
+```
+
+### การใช้งาน Components
+
+```typescript
+// ตัวอย่างการใช้งาน Button component
+import { HERO_CMP_01 } from './src/tools/components/HERO_CMP_01';
+
+const button = HERO_CMP_01.createButton({
+  text: 'Click Me',
+  variant: 'primary',
+  size: 'medium'
+});
+```
+
+### การใช้งาน Layout
+
+```typescript
+// ตัวอย่างการใช้งาน Grid layout
+import { HERO_LAY_01 } from './src/tools/layout/HERO_LAY_01';
+
+const gridLayout = HERO_LAY_01.createGrid({
+  columns: 3,
+  gap: '1rem',
+  responsive: true
+});
+```
+
+## 📁 โครงสร้างโปรเจ้ค
+
+```
+heroui-mcp-server/
+├── src/                          # ซอร์สโค้ดหลัก
+│   ├── server/                   # เซิร์ฟเวอร์และ handlers
+│   │   ├── index.ts             # เซิร์ฟเวอร์หลัก
+│   │   ├── handlers.ts          # request handlers
+│   │   └── registry.ts          # tool registry
+│   ├── tools/                   # เครื่องมือ UI
+│   │   ├── components/          # UI Components (16 files)
+│   │   ├── layout/              # Layout tools (5 files)
+│   │   ├── theme/               # Theme tools (4 files)
+│   │   ├── canvas/              # Canvas tools (6 files)
+│   │   ├── templates/           # Templates (6 files)
+│   │   ├── advanced/            # Advanced tools (11 files)
+│   │   └── general/             # General utilities
+│   ├── memory/                  # Memory management
+│   │   ├── session-manager.ts   # Session management
+│   │   ├── summarization.ts     # Content summarization
+│   │   └── trimming.ts          # Memory trimming
+│   ├── objects/                 # Object management
+│   │   ├── crud.ts              # CRUD operations
+│   │   ├── schemas.ts           # Data schemas
+│   │   └── storage.ts           # Storage layer
+│   └── utils/                   # Utilities
+│       ├── hash.ts              # Hashing functions
+│       ├── responsive.ts        # Responsive utilities
+│       └── validation.ts        # Validation helpers
+├── data/                        # ข้อมูลและ cache
+│   ├── cache/                   # Cache storage
+│   ├── objects/                 # Object storage
+│   └── templates/               # Template storage
+├── docs/                        # เอกสารประกอบ
+├── tests/                       # Test files
+├── q/                          # Q CLI tools
+├── package.json                # Package configuration
+├── tsconfig.json               # TypeScript configuration
+└── README.md                   # เอกสารนี้
+```
+
+## 📚 API Documentation
+
+### Components API
+
+#### HERO_CMP_01 - HERO_CMP_16
+เครื่องมือสำหรับสร้าง UI components ต่างๆ
+
+- **HERO_CMP_01**: Button components
+- **HERO_CMP_02**: Input components
+- **HERO_CMP_03**: Card components
+- **HERO_CMP_04**: Modal components
+- **HERO_CMP_05**: Navigation components
+- และอื่นๆ อีก 11 components
+
+### Layout API
+
+#### HERO_LAY_01 - HERO_LAY_05
+เครื่องมือสำหรับจัดการ layout
+
+- **HERO_LAY_01**: Grid system
+- **HERO_LAY_02**: Flexbox layouts
+- **HERO_LAY_03**: Container layouts
+- **HERO_LAY_04**: Responsive layouts
+- **HERO_LAY_05**: Custom layouts
+
+### Theme API
+
+#### HERO_THM_01 - HERO_THM_04
+เครื่องมือสำหรับจัดการ theme
+
+- **HERO_THM_01**: Color themes
+- **HERO_THM_02**: Typography themes
+- **HERO_THM_03**: Spacing themes
+- **HERO_THM_04**: Custom themes
+
+### Canvas API
+
+#### HERO_CVS_01 - HERO_CVS_06
+เครื่องมือสำหรับ canvas และการวาด
+
+- **HERO_CVS_01**: Basic drawing
+- **HERO_CVS_02**: Shape tools
+- **HERO_CVS_03**: Text rendering
+- **HERO_CVS_04**: Image manipulation
+- **HERO_CVS_05**: Animation tools
+- **HERO_CVS_06**: Export tools
+
+## 🔧 การพัฒนา
+
+### การตั้งค่า Development Environment
+
+1. **Clone และติดตั้ง**
+```bash
+git clone <repository-url>
+cd heroui-mcp-server
+npm install
+```
+
+2. **รัน development server**
+```bash
+npm run dev
+```
+
+3. **รัน tests**
+```bash
+npm test
+```
+
+### การเพิ่ม Component ใหม่
+
+1. สร้างไฟล์ใหม่ใน `src/tools/components/`
+2. implement interface ที่กำหนด
+3. เพิ่มใน registry
+4. เขียน tests
+5. อัพเดท documentation
+
+### Code Style
+
+- ใช้ TypeScript strict mode
+- ใช้ ESLint และ Prettier
+- ตั้งชื่อไฟล์ตาม convention: `HERO_[TYPE]_[NUMBER].ts`
+- เขียน JSDoc สำหรับ public APIs
+
+## 🤝 การมีส่วนร่วม
+
+เรายินดีรับการมีส่วนร่วมจากชุมชน! 
+
+### วิธีการมีส่วนร่วม
+
+1. Fork repository
+2. สร้าง feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit การเปลี่ยนแปลง (`git commit -m 'Add amazing feature'`)
+4. Push ไปยัง branch (`git push origin feature/amazing-feature`)
+5. เปิด Pull Request
+
+### Guidelines
+
+- เขียน commit messages ที่ชัดเจน
+- เพิ่ม tests สำหรับ features ใหม่
+- อัพเดท documentation
+- ตรวจสอบ code style
+
+## 📄 License
+
+โปรเจ้คนี้ใช้ ISC License - ดูรายละเอียดใน [LICENSE](LICENSE) file
+
+## 🙏 Acknowledgments
+
+- [Model Context Protocol](https://modelcontextprotocol.io/) สำหรับ MCP specification
+- [Fastify](https://www.fastify.io/) สำหรับ web framework
+- [Zod](https://zod.dev/) สำหรับ schema validation
+- [TypeScript](https://www.typescriptlang.org/) สำหรับ type safety
+
+## 📞 ติดต่อ
+
+หากมีคำถามหรือข้อเสนอแนะ สามารถติดต่อได้ที่:
+
+- GitHub Issues: [Create an issue](../../issues)
+- Email: [your-email@example.com]
+
+---
+
+**HeroUI MCP Server** - สร้าง UI ที่สวยงามและมีประสิทธิภาพด้วย MCP 🚀

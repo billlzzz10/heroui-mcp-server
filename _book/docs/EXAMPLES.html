@@ -1,0 +1,1505 @@
+
+<!DOCTYPE HTML>
+<html lang="th" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Examples · HeroUI MCP Server Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.1.4">
+        <meta name="author" content="HeroUI Team">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="best-practices.html" />
+    
+    
+    <link rel="prev" href="api/templates.md" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="GETTING_STARTED.html">
+            
+                <a href="GETTING_STARTED.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="quick-start.html">
+            
+                <a href="quick-start.html">
+            
+                    
+                    Quick Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">API Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="API_REFERENCE.html">
+            
+                <a href="API_REFERENCE.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="api/components.md">
+            
+                <span>
+            
+                    
+                    Components API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="api/layout.md">
+            
+                <span>
+            
+                    
+                    Layout API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="api/theme.md">
+            
+                <span>
+            
+                    
+                    Theme API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="api/canvas.md">
+            
+                <span>
+            
+                    
+                    Canvas API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="api/advanced.md">
+            
+                <span>
+            
+                    
+                    Advanced Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="api/templates.md">
+            
+                <span>
+            
+                    
+                    Templates
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Guides</li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="EXAMPLES.html">
+            
+                <a href="EXAMPLES.html">
+            
+                    
+                    Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="best-practices.html">
+            
+                <a href="best-practices.html">
+            
+                    
+                    Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="performance.html">
+            
+                <a href="performance.html">
+            
+                    
+                    Performance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="security.html">
+            
+                <a href="security.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Architecture</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="ARCHITECTURE.html">
+            
+                <a href="ARCHITECTURE.html">
+            
+                    
+                    System Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="architecture/core-components.html">
+            
+                <a href="architecture/core-components.html">
+            
+                    
+                    Core Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="architecture/data-flow.html">
+            
+                <a href="architecture/data-flow.html">
+            
+                    
+                    Data Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="architecture/memory-management.html">
+            
+                <a href="architecture/memory-management.html">
+            
+                    
+                    Memory Management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Integration</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="integration/react.html">
+            
+                <a href="integration/react.html">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="integration/vue.html">
+            
+                <a href="integration/vue.html">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="integration/angular.html">
+            
+                <a href="integration/angular.html">
+            
+                    
+                    Angular
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="integration/nodejs.html">
+            
+                <a href="integration/nodejs.html">
+            
+                    
+                    Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Deployment</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="deployment/docker.html">
+            
+                <a href="deployment/docker.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="deployment/production.html">
+            
+                <a href="deployment/production.html">
+            
+                    
+                    Production
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="deployment/monitoring.html">
+            
+                <a href="deployment/monitoring.html">
+            
+                    
+                    Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contributing</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../CONTRIBUTING.html">
+            
+                <a href="../CONTRIBUTING.html">
+            
+                    
+                    Guidelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="contributing/development.html">
+            
+                <a href="contributing/development.html">
+            
+                    
+                    Development Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="contributing/testing.html">
+            
+                <a href="contributing/testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="contributing/release.html">
+            
+                <a href="contributing/release.html">
+            
+                    
+                    Release Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../CHANGELOG.html">
+            
+                <a href="../CHANGELOG.html">
+            
+                    
+                    Changelog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="faq.html">
+            
+                <a href="faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="troubleshooting.html">
+            
+                <a href="troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="glossary.html">
+            
+                <a href="glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Examples</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="examples">Examples</h1>
+<p>ตัวอย่างการใช้งาน HeroUI MCP Server ในสถานการณ์ต่างๆ</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#basic-usage">Basic Usage</a></li>
+<li><a href="#component-examples">Component Examples</a></li>
+<li><a href="#layout-examples">Layout Examples</a></li>
+<li><a href="#theme-examples">Theme Examples</a></li>
+<li><a href="#canvas-examples">Canvas Examples</a></li>
+<li><a href="#advanced-examples">Advanced Examples</a></li>
+<li><a href="#integration-examples">Integration Examples</a></li>
+<li><a href="#real-world-projects">Real-world Projects</a></li>
+</ul>
+<h2 id="basic-usage">Basic Usage</h2>
+<h3 id="การเริ่มต้นใช้งาน">การเริ่มต้นใช้งาน</h3>
+<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">HeroUIClient</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">'@heroui/client'</span>;
+
+<span class="hljs-comment">// สร้าง client instance</span>
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HeroUIClient</span>({
+  <span class="hljs-attr">baseURL</span>: <span class="hljs-string">'http://localhost:3000'</span>,
+  <span class="hljs-attr">apiKey</span>: <span class="hljs-string">'your-api-key'</span> <span class="hljs-comment">// optional</span>
+});
+
+<span class="hljs-comment">// ตรวจสอบการเชื่อมต่อ</span>
+<span class="hljs-keyword">const</span> health = <span class="hljs-keyword">await</span> client.<span class="hljs-title function_">health</span>();
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'Server status:'</span>, health.<span class="hljs-property">status</span>);
+</code></pre>
+<h3 id="การสร้าง-component-แรก">การสร้าง Component แรก</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// สร้าง button component</span>
+<span class="hljs-keyword">const</span> button = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createButton</span>({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">'Hello World'</span>,
+  <span class="hljs-attr">variant</span>: <span class="hljs-string">'primary'</span>,
+  <span class="hljs-attr">size</span>: <span class="hljs-string">'medium'</span>,
+  <span class="hljs-attr">onClick</span>: <span class="hljs-string">'alert("Button clicked!")'</span>
+});
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'Button HTML:'</span>, button.<span class="hljs-property">html</span>);
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'Button CSS:'</span>, button.<span class="hljs-property">css</span>);
+</code></pre>
+<h2 id="component-examples">Component Examples</h2>
+<h3 id="1-button-components">1. Button Components</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Primary button</span>
+<span class="hljs-keyword">const</span> primaryButton = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createButton</span>({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">'Primary Action'</span>,
+  <span class="hljs-attr">variant</span>: <span class="hljs-string">'primary'</span>,
+  <span class="hljs-attr">size</span>: <span class="hljs-string">'large'</span>,
+  <span class="hljs-attr">disabled</span>: <span class="hljs-literal">false</span>
+});
+
+<span class="hljs-comment">// Secondary button with icon</span>
+<span class="hljs-keyword">const</span> secondaryButton = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createButton</span>({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">'Secondary Action'</span>,
+  <span class="hljs-attr">variant</span>: <span class="hljs-string">'secondary'</span>,
+  <span class="hljs-attr">size</span>: <span class="hljs-string">'medium'</span>,
+  <span class="hljs-attr">icon</span>: <span class="hljs-string">'arrow-right'</span>,
+  <span class="hljs-attr">iconPosition</span>: <span class="hljs-string">'right'</span>
+});
+
+<span class="hljs-comment">// Danger button</span>
+<span class="hljs-keyword">const</span> dangerButton = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createButton</span>({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">'Delete'</span>,
+  <span class="hljs-attr">variant</span>: <span class="hljs-string">'danger'</span>,
+  <span class="hljs-attr">size</span>: <span class="hljs-string">'small'</span>,
+  <span class="hljs-attr">confirmMessage</span>: <span class="hljs-string">'Are you sure you want to delete this item?'</span>
+});
+</code></pre>
+<h3 id="2-form-components">2. Form Components</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Contact form</span>
+<span class="hljs-keyword">const</span> contactForm = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createForm</span>({
+  <span class="hljs-attr">fields</span>: [
+    {
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'text'</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'name'</span>,
+      <span class="hljs-attr">label</span>: <span class="hljs-string">'Full Name'</span>,
+      <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">placeholder</span>: <span class="hljs-string">'Enter your full name'</span>
+    },
+    {
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'email'</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'email'</span>,
+      <span class="hljs-attr">label</span>: <span class="hljs-string">'Email Address'</span>,
+      <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">validation</span>: {
+        <span class="hljs-attr">pattern</span>: <span class="hljs-string">'^[^@]+@[^@]+\.[^@]+$'</span>,
+        <span class="hljs-attr">message</span>: <span class="hljs-string">'Please enter a valid email address'</span>
+      }
+    },
+    {
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'textarea'</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'message'</span>,
+      <span class="hljs-attr">label</span>: <span class="hljs-string">'Message'</span>,
+      <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">rows</span>: <span class="hljs-number">5</span>,
+      <span class="hljs-attr">maxLength</span>: <span class="hljs-number">500</span>
+    }
+  ],
+  <span class="hljs-attr">submitButton</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">'Send Message'</span>,
+    <span class="hljs-attr">variant</span>: <span class="hljs-string">'primary'</span>
+  },
+  <span class="hljs-attr">onSubmit</span>: <span class="hljs-string">'handleContactFormSubmit'</span>
+});
+</code></pre>
+<h3 id="3-card-components">3. Card Components</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Product card</span>
+<span class="hljs-keyword">const</span> productCard = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createCard</span>({
+  <span class="hljs-attr">image</span>: <span class="hljs-string">'https://example.com/product.jpg'</span>,
+  <span class="hljs-attr">title</span>: <span class="hljs-string">'Premium Headphones'</span>,
+  <span class="hljs-attr">description</span>: <span class="hljs-string">'High-quality wireless headphones with noise cancellation'</span>,
+  <span class="hljs-attr">price</span>: <span class="hljs-string">'$299.99'</span>,
+  <span class="hljs-attr">actions</span>: [
+    {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">'Add to Cart'</span>,
+      <span class="hljs-attr">variant</span>: <span class="hljs-string">'primary'</span>,
+      <span class="hljs-attr">action</span>: <span class="hljs-string">'addToCart'</span>
+    },
+    {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">'View Details'</span>,
+      <span class="hljs-attr">variant</span>: <span class="hljs-string">'secondary'</span>,
+      <span class="hljs-attr">action</span>: <span class="hljs-string">'viewDetails'</span>
+    }
+  ],
+  <span class="hljs-attr">badge</span>: {
+    <span class="hljs-attr">text</span>: <span class="hljs-string">'Best Seller'</span>,
+    <span class="hljs-attr">variant</span>: <span class="hljs-string">'success'</span>
+  }
+});
+</code></pre>
+<h2 id="layout-examples">Layout Examples</h2>
+<h3 id="1-grid-layout">1. Grid Layout</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Responsive product grid</span>
+<span class="hljs-keyword">const</span> productGrid = <span class="hljs-keyword">await</span> client.<span class="hljs-property">layout</span>.<span class="hljs-title function_">createGrid</span>({
+  <span class="hljs-attr">columns</span>: <span class="hljs-number">4</span>,
+  <span class="hljs-attr">gap</span>: <span class="hljs-string">'2rem'</span>,
+  <span class="hljs-attr">responsive</span>: {
+    <span class="hljs-attr">mobile</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">tablet</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">desktop</span>: <span class="hljs-number">4</span>
+  },
+  <span class="hljs-attr">items</span>: [
+    { <span class="hljs-attr">component</span>: <span class="hljs-string">'product-card-1'</span>, <span class="hljs-attr">span</span>: <span class="hljs-number">1</span> },
+    { <span class="hljs-attr">component</span>: <span class="hljs-string">'product-card-2'</span>, <span class="hljs-attr">span</span>: <span class="hljs-number">1</span> },
+    { <span class="hljs-attr">component</span>: <span class="hljs-string">'product-card-3'</span>, <span class="hljs-attr">span</span>: <span class="hljs-number">1</span> },
+    { <span class="hljs-attr">component</span>: <span class="hljs-string">'product-card-4'</span>, <span class="hljs-attr">span</span>: <span class="hljs-number">1</span> }
+  ]
+});
+</code></pre>
+<h3 id="2-dashboard-layout">2. Dashboard Layout</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Admin dashboard layout</span>
+<span class="hljs-keyword">const</span> dashboardLayout = <span class="hljs-keyword">await</span> client.<span class="hljs-property">layout</span>.<span class="hljs-title function_">createDashboard</span>({
+  <span class="hljs-attr">header</span>: {
+    <span class="hljs-attr">height</span>: <span class="hljs-string">'60px'</span>,
+    <span class="hljs-attr">component</span>: <span class="hljs-string">'dashboard-header'</span>
+  },
+  <span class="hljs-attr">sidebar</span>: {
+    <span class="hljs-attr">width</span>: <span class="hljs-string">'250px'</span>,
+    <span class="hljs-attr">component</span>: <span class="hljs-string">'dashboard-sidebar'</span>,
+    <span class="hljs-attr">collapsible</span>: <span class="hljs-literal">true</span>
+  },
+  <span class="hljs-attr">main</span>: {
+    <span class="hljs-attr">component</span>: <span class="hljs-string">'dashboard-content'</span>,
+    <span class="hljs-attr">padding</span>: <span class="hljs-string">'2rem'</span>
+  },
+  <span class="hljs-attr">footer</span>: {
+    <span class="hljs-attr">height</span>: <span class="hljs-string">'40px'</span>,
+    <span class="hljs-attr">component</span>: <span class="hljs-string">'dashboard-footer'</span>
+  }
+});
+</code></pre>
+<h3 id="3-blog-layout">3. Blog Layout</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Blog post layout</span>
+<span class="hljs-keyword">const</span> blogLayout = <span class="hljs-keyword">await</span> client.<span class="hljs-property">layout</span>.<span class="hljs-title function_">createBlog</span>({
+  <span class="hljs-attr">header</span>: <span class="hljs-string">'blog-header'</span>,
+  <span class="hljs-attr">content</span>: {
+    <span class="hljs-attr">main</span>: <span class="hljs-string">'blog-post-content'</span>,
+    <span class="hljs-attr">sidebar</span>: <span class="hljs-string">'blog-sidebar'</span>
+  },
+  <span class="hljs-attr">footer</span>: <span class="hljs-string">'blog-footer'</span>,
+  <span class="hljs-attr">contentWidth</span>: <span class="hljs-string">'800px'</span>,
+  <span class="hljs-attr">sidebarWidth</span>: <span class="hljs-string">'300px'</span>,
+  <span class="hljs-attr">gap</span>: <span class="hljs-string">'3rem'</span>
+});
+</code></pre>
+<h2 id="theme-examples">Theme Examples</h2>
+<h3 id="1-dark-theme">1. Dark Theme</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Apply dark theme</span>
+<span class="hljs-keyword">const</span> darkTheme = <span class="hljs-keyword">await</span> client.<span class="hljs-property">theme</span>.<span class="hljs-title function_">setColors</span>({
+  <span class="hljs-attr">primary</span>: <span class="hljs-string">'#3b82f6'</span>,
+  <span class="hljs-attr">secondary</span>: <span class="hljs-string">'#64748b'</span>,
+  <span class="hljs-attr">background</span>: <span class="hljs-string">'#0f172a'</span>,
+  <span class="hljs-attr">surface</span>: <span class="hljs-string">'#1e293b'</span>,
+  <span class="hljs-attr">text</span>: <span class="hljs-string">'#f8fafc'</span>,
+  <span class="hljs-attr">textSecondary</span>: <span class="hljs-string">'#cbd5e1'</span>,
+  <span class="hljs-attr">border</span>: <span class="hljs-string">'#334155'</span>,
+  <span class="hljs-attr">error</span>: <span class="hljs-string">'#ef4444'</span>,
+  <span class="hljs-attr">warning</span>: <span class="hljs-string">'#f59e0b'</span>,
+  <span class="hljs-attr">success</span>: <span class="hljs-string">'#10b981'</span>
+});
+
+<span class="hljs-comment">// Apply typography</span>
+<span class="hljs-keyword">await</span> client.<span class="hljs-property">theme</span>.<span class="hljs-title function_">setTypography</span>({
+  <span class="hljs-attr">fontFamily</span>: <span class="hljs-string">'Inter, system-ui, sans-serif'</span>,
+  <span class="hljs-attr">fontSize</span>: {
+    <span class="hljs-attr">xs</span>: <span class="hljs-string">'0.75rem'</span>,
+    <span class="hljs-attr">sm</span>: <span class="hljs-string">'0.875rem'</span>,
+    <span class="hljs-attr">md</span>: <span class="hljs-string">'1rem'</span>,
+    <span class="hljs-attr">lg</span>: <span class="hljs-string">'1.125rem'</span>,
+    <span class="hljs-attr">xl</span>: <span class="hljs-string">'1.25rem'</span>,
+    <span class="hljs-string">'2xl'</span>: <span class="hljs-string">'1.5rem'</span>
+  },
+  <span class="hljs-attr">fontWeight</span>: {
+    <span class="hljs-attr">light</span>: <span class="hljs-number">300</span>,
+    <span class="hljs-attr">normal</span>: <span class="hljs-number">400</span>,
+    <span class="hljs-attr">medium</span>: <span class="hljs-number">500</span>,
+    <span class="hljs-attr">bold</span>: <span class="hljs-number">700</span>
+  }
+});
+</code></pre>
+<h3 id="2-brand-theme">2. Brand Theme</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Company brand theme</span>
+<span class="hljs-keyword">const</span> brandTheme = <span class="hljs-keyword">await</span> client.<span class="hljs-property">theme</span>.<span class="hljs-title function_">createBrandTheme</span>({
+  <span class="hljs-attr">brand</span>: {
+    <span class="hljs-attr">primary</span>: <span class="hljs-string">'#6366f1'</span>,
+    <span class="hljs-attr">secondary</span>: <span class="hljs-string">'#8b5cf6'</span>,
+    <span class="hljs-attr">accent</span>: <span class="hljs-string">'#06b6d4'</span>
+  },
+  <span class="hljs-attr">neutral</span>: {
+    <span class="hljs-number">50</span>: <span class="hljs-string">'#f8fafc'</span>,
+    <span class="hljs-number">100</span>: <span class="hljs-string">'#f1f5f9'</span>,
+    <span class="hljs-number">500</span>: <span class="hljs-string">'#64748b'</span>,
+    <span class="hljs-number">900</span>: <span class="hljs-string">'#0f172a'</span>
+  },
+  <span class="hljs-attr">semantic</span>: {
+    <span class="hljs-attr">success</span>: <span class="hljs-string">'#059669'</span>,
+    <span class="hljs-attr">warning</span>: <span class="hljs-string">'#d97706'</span>,
+    <span class="hljs-attr">error</span>: <span class="hljs-string">'#dc2626'</span>,
+    <span class="hljs-attr">info</span>: <span class="hljs-string">'#0284c7'</span>
+  }
+});
+</code></pre>
+<h2 id="canvas-examples">Canvas Examples</h2>
+<h3 id="1-chart-creation">1. Chart Creation</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Create bar chart</span>
+<span class="hljs-keyword">const</span> barChart = <span class="hljs-keyword">await</span> client.<span class="hljs-property">canvas</span>.<span class="hljs-title function_">createChart</span>({
+  <span class="hljs-attr">type</span>: <span class="hljs-string">'bar'</span>,
+  <span class="hljs-attr">data</span>: {
+    <span class="hljs-attr">labels</span>: [<span class="hljs-string">'Jan'</span>, <span class="hljs-string">'Feb'</span>, <span class="hljs-string">'Mar'</span>, <span class="hljs-string">'Apr'</span>, <span class="hljs-string">'May'</span>],
+    <span class="hljs-attr">datasets</span>: [{
+      <span class="hljs-attr">label</span>: <span class="hljs-string">'Sales'</span>,
+      <span class="hljs-attr">data</span>: [<span class="hljs-number">12</span>, <span class="hljs-number">19</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>],
+      <span class="hljs-attr">backgroundColor</span>: <span class="hljs-string">'#3b82f6'</span>
+    }]
+  },
+  <span class="hljs-attr">options</span>: {
+    <span class="hljs-attr">responsive</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">plugins</span>: {
+      <span class="hljs-attr">title</span>: {
+        <span class="hljs-attr">display</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">text</span>: <span class="hljs-string">'Monthly Sales Report'</span>
+      }
+    }
+  }
+});
+</code></pre>
+<h3 id="2-custom-graphics">2. Custom Graphics</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Create custom illustration</span>
+<span class="hljs-keyword">const</span> illustration = <span class="hljs-keyword">await</span> client.<span class="hljs-property">canvas</span>.<span class="hljs-title function_">createIllustration</span>({
+  <span class="hljs-attr">width</span>: <span class="hljs-number">400</span>,
+  <span class="hljs-attr">height</span>: <span class="hljs-number">300</span>,
+  <span class="hljs-attr">elements</span>: [
+    {
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'rectangle'</span>,
+      <span class="hljs-attr">x</span>: <span class="hljs-number">50</span>,
+      <span class="hljs-attr">y</span>: <span class="hljs-number">50</span>,
+      <span class="hljs-attr">width</span>: <span class="hljs-number">300</span>,
+      <span class="hljs-attr">height</span>: <span class="hljs-number">200</span>,
+      <span class="hljs-attr">fill</span>: <span class="hljs-string">'#f3f4f6'</span>,
+      <span class="hljs-attr">stroke</span>: <span class="hljs-string">'#d1d5db'</span>,
+      <span class="hljs-attr">strokeWidth</span>: <span class="hljs-number">2</span>
+    },
+    {
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'circle'</span>,
+      <span class="hljs-attr">x</span>: <span class="hljs-number">200</span>,
+      <span class="hljs-attr">y</span>: <span class="hljs-number">150</span>,
+      <span class="hljs-attr">radius</span>: <span class="hljs-number">50</span>,
+      <span class="hljs-attr">fill</span>: <span class="hljs-string">'#3b82f6'</span>
+    },
+    {
+      <span class="hljs-attr">type</span>: <span class="hljs-string">'text'</span>,
+      <span class="hljs-attr">x</span>: <span class="hljs-number">200</span>,
+      <span class="hljs-attr">y</span>: <span class="hljs-number">280</span>,
+      <span class="hljs-attr">text</span>: <span class="hljs-string">'HeroUI Canvas'</span>,
+      <span class="hljs-attr">fontSize</span>: <span class="hljs-number">18</span>,
+      <span class="hljs-attr">fontFamily</span>: <span class="hljs-string">'Arial'</span>,
+      <span class="hljs-attr">fill</span>: <span class="hljs-string">'#374151'</span>,
+      <span class="hljs-attr">textAlign</span>: <span class="hljs-string">'center'</span>
+    }
+  ]
+});
+</code></pre>
+<h2 id="advanced-examples">Advanced Examples</h2>
+<h3 id="1-animation-system">1. Animation System</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Create fade-in animation</span>
+<span class="hljs-keyword">const</span> fadeInAnimation = <span class="hljs-keyword">await</span> client.<span class="hljs-property">advanced</span>.<span class="hljs-title function_">createAnimation</span>({
+  <span class="hljs-attr">name</span>: <span class="hljs-string">'fadeIn'</span>,
+  <span class="hljs-attr">keyframes</span>: [
+    { <span class="hljs-attr">offset</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">opacity</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">transform</span>: <span class="hljs-string">'translateY(20px)'</span> },
+    { <span class="hljs-attr">offset</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">opacity</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">transform</span>: <span class="hljs-string">'translateY(0)'</span> }
+  ],
+  <span class="hljs-attr">duration</span>: <span class="hljs-number">500</span>,
+  <span class="hljs-attr">easing</span>: <span class="hljs-string">'ease-out'</span>,
+  <span class="hljs-attr">fill</span>: <span class="hljs-string">'forwards'</span>
+});
+
+<span class="hljs-comment">// Apply animation to component</span>
+<span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">applyAnimation</span>(<span class="hljs-string">'my-component'</span>, fadeInAnimation.<span class="hljs-property">id</span>);
+</code></pre>
+<h3 id="2-state-management">2. State Management</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Create global store</span>
+<span class="hljs-keyword">const</span> appStore = <span class="hljs-keyword">await</span> client.<span class="hljs-property">advanced</span>.<span class="hljs-title function_">createStore</span>({
+  <span class="hljs-attr">name</span>: <span class="hljs-string">'appStore'</span>,
+  <span class="hljs-attr">initialState</span>: {
+    <span class="hljs-attr">user</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">theme</span>: <span class="hljs-string">'light'</span>,
+    <span class="hljs-attr">notifications</span>: []
+  },
+  <span class="hljs-attr">actions</span>: {
+    <span class="hljs-attr">setUser</span>: <span class="hljs-function">(<span class="hljs-params">state, user</span>) =&gt;</span> ({ ...state, user }),
+    <span class="hljs-attr">toggleTheme</span>: <span class="hljs-function">(<span class="hljs-params">state</span>) =&gt;</span> ({
+      ...state,
+      <span class="hljs-attr">theme</span>: state.<span class="hljs-property">theme</span> === <span class="hljs-string">'light'</span> ? <span class="hljs-string">'dark'</span> : <span class="hljs-string">'light'</span>
+    }),
+    <span class="hljs-attr">addNotification</span>: <span class="hljs-function">(<span class="hljs-params">state, notification</span>) =&gt;</span> ({
+      ...state,
+      <span class="hljs-attr">notifications</span>: [...state.<span class="hljs-property">notifications</span>, notification]
+    })
+  }
+});
+</code></pre>
+<h3 id="3-real-time-updates">3. Real-time Updates</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Setup WebSocket connection</span>
+<span class="hljs-keyword">const</span> websocket = <span class="hljs-keyword">await</span> client.<span class="hljs-property">advanced</span>.<span class="hljs-title function_">createWebSocket</span>({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'ws://localhost:3000/ws'</span>,
+  <span class="hljs-attr">events</span>: {
+    <span class="hljs-string">'component-updated'</span>: <span class="hljs-function">(<span class="hljs-params">data</span>) =&gt;</span> {
+      <span class="hljs-comment">// Handle component updates</span>
+      client.<span class="hljs-property">components</span>.<span class="hljs-title function_">refresh</span>(data.<span class="hljs-property">componentId</span>);
+    },
+    <span class="hljs-string">'theme-changed'</span>: <span class="hljs-function">(<span class="hljs-params">data</span>) =&gt;</span> {
+      <span class="hljs-comment">// Handle theme changes</span>
+      client.<span class="hljs-property">theme</span>.<span class="hljs-title function_">apply</span>(data.<span class="hljs-property">theme</span>);
+    }
+  }
+});
+</code></pre>
+<h2 id="integration-examples">Integration Examples</h2>
+<h3 id="1-react-integration">1. React Integration</h3>
+<pre><code class="lang-tsx"><span class="hljs-keyword">import</span> <span class="hljs-title class_">React</span>, { useEffect, useState } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> { <span class="hljs-title class_">HeroUIClient</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">'@heroui/client'</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title class_">HeroUIComponent</span>: <span class="hljs-title class_">React</span>.<span class="hljs-property">FC</span>&lt;{ <span class="hljs-attr">componentId</span>: <span class="hljs-built_in">string</span> }&gt; = <span class="hljs-function">(<span class="hljs-params">{ componentId }</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> [html, setHtml] = <span class="hljs-title function_">useState</span>(<span class="hljs-string">''</span>);
+  <span class="hljs-keyword">const</span> [css, setCss] = <span class="hljs-title function_">useState</span>(<span class="hljs-string">''</span>);
+
+  <span class="hljs-title function_">useEffect</span>(<span class="hljs-function">() =&gt;</span> {
+    <span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HeroUIClient</span>();
+
+    client.<span class="hljs-property">components</span>.<span class="hljs-title function_">get</span>(componentId).<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">component</span> =&gt;</span> {
+      <span class="hljs-title function_">setHtml</span>(component.<span class="hljs-property">html</span>);
+      <span class="hljs-title function_">setCss</span>(component.<span class="hljs-property">css</span>);
+    });
+  }, [componentId]);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">dangerouslySetInnerHTML</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">__html:</span> <span class="hljs-attr">css</span> }} /&gt;</span><span class="language-xml">
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">dangerouslySetInnerHTML</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">__html:</span> <span class="hljs-attr">html</span> }} /&gt;</span>
+    <span class="hljs-tag">&lt;/&gt;</span></span></span>
+  );
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">HeroUIComponent</span>;
+</code></pre>
+<h3 id="2-vue-integration">2. Vue Integration</h3>
+<pre><code class="lang-vue">&lt;template&gt;
+  &lt;div&gt;
+    &lt;component :is="'div'" v-html="html" /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script setup lang="ts"&gt;
+import { ref, onMounted } from 'vue';
+import { HeroUIClient } from '@heroui/client';
+
+const props = defineProps&lt;{
+  componentId: string;
+}&gt;();
+
+const html = ref('');
+const css = ref('');
+
+onMounted(async () =&gt; {
+  const client = new HeroUIClient();
+  const component = await client.components.get(props.componentId);
+
+  html.value = component.html;
+
+  // Inject CSS
+  const style = document.createElement('style');
+  style.textContent = component.css;
+  document.head.appendChild(style);
+});
+&lt;/script&gt;
+</code></pre>
+<h3 id="3-angular-integration">3. Angular Integration</h3>
+<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { <span class="hljs-title class_">Component</span>, <span class="hljs-title class_">Input</span>, <span class="hljs-title class_">OnInit</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { <span class="hljs-title class_">DomSanitizer</span>, <span class="hljs-title class_">SafeHtml</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser'</span>;
+<span class="hljs-keyword">import</span> { <span class="hljs-title class_">HeroUIClient</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">'@heroui/client'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  <span class="hljs-attr">selector</span>: <span class="hljs-string">'app-heroui-component'</span>,
+  <span class="hljs-attr">template</span>: <span class="hljs-string">`&lt;div [innerHTML]="safeHtml"&gt;&lt;/div&gt;`</span>
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">HeroUIComponent</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">OnInit</span> {
+  <span class="hljs-meta">@Input</span>() componentId!: <span class="hljs-built_in">string</span>;
+
+  <span class="hljs-attr">safeHtml</span>: <span class="hljs-title class_">SafeHtml</span> = <span class="hljs-string">''</span>;
+
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">
+    <span class="hljs-keyword">private</span> <span class="hljs-attr">sanitizer</span>: <span class="hljs-title class_">DomSanitizer</span>,
+    <span class="hljs-keyword">private</span> <span class="hljs-attr">heroUIClient</span>: <span class="hljs-title class_">HeroUIClient</span>
+  </span>) {}
+
+  <span class="hljs-keyword">async</span> <span class="hljs-title function_">ngOnInit</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> component = <span class="hljs-keyword">await</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">heroUIClient</span>.<span class="hljs-property">components</span>.<span class="hljs-title function_">get</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">componentId</span>);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">safeHtml</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-property">sanitizer</span>.<span class="hljs-title function_">bypassSecurityTrustHtml</span>(component.<span class="hljs-property">html</span>);
+
+    <span class="hljs-comment">// Inject CSS</span>
+    <span class="hljs-keyword">const</span> style = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">'style'</span>);
+    style.<span class="hljs-property">textContent</span> = component.<span class="hljs-property">css</span>;
+    <span class="hljs-variable language_">document</span>.<span class="hljs-property">head</span>.<span class="hljs-title function_">appendChild</span>(style);
+  }
+}
+</code></pre>
+<h2 id="real-world-projects">Real-world Projects</h2>
+<h3 id="1-e-commerce-website">1. E-commerce Website</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Create complete e-commerce page</span>
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">createEcommercePage</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-comment">// Header with navigation</span>
+  <span class="hljs-keyword">const</span> header = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createNavigation</span>({
+    <span class="hljs-attr">brand</span>: { <span class="hljs-attr">text</span>: <span class="hljs-string">'ShopHero'</span>, <span class="hljs-attr">logo</span>: <span class="hljs-string">'/logo.png'</span> },
+    <span class="hljs-attr">items</span>: [
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'Home'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/'</span> },
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'Products'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/products'</span> },
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'About'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/about'</span> },
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'Contact'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/contact'</span> }
+    ],
+    <span class="hljs-attr">actions</span>: [
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'Cart (0)'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/cart'</span>, <span class="hljs-attr">icon</span>: <span class="hljs-string">'shopping-cart'</span> },
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'Login'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/login'</span>, <span class="hljs-attr">variant</span>: <span class="hljs-string">'outline'</span> }
+    ]
+  });
+
+  <span class="hljs-comment">// Hero section</span>
+  <span class="hljs-keyword">const</span> hero = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createHero</span>({
+    <span class="hljs-attr">title</span>: <span class="hljs-string">'Discover Amazing Products'</span>,
+    <span class="hljs-attr">subtitle</span>: <span class="hljs-string">'Shop the latest trends with confidence'</span>,
+    <span class="hljs-attr">backgroundImage</span>: <span class="hljs-string">'/hero-bg.jpg'</span>,
+    <span class="hljs-attr">cta</span>: {
+      <span class="hljs-attr">text</span>: <span class="hljs-string">'Shop Now'</span>,
+      <span class="hljs-attr">href</span>: <span class="hljs-string">'/products'</span>,
+      <span class="hljs-attr">variant</span>: <span class="hljs-string">'primary'</span>,
+      <span class="hljs-attr">size</span>: <span class="hljs-string">'large'</span>
+    }
+  });
+
+  <span class="hljs-comment">// Product grid</span>
+  <span class="hljs-keyword">const</span> productGrid = <span class="hljs-keyword">await</span> client.<span class="hljs-property">layout</span>.<span class="hljs-title function_">createGrid</span>({
+    <span class="hljs-attr">columns</span>: <span class="hljs-number">4</span>,
+    <span class="hljs-attr">gap</span>: <span class="hljs-string">'2rem'</span>,
+    <span class="hljs-attr">responsive</span>: { <span class="hljs-attr">mobile</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">tablet</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">desktop</span>: <span class="hljs-number">4</span> }
+  });
+
+  <span class="hljs-comment">// Footer</span>
+  <span class="hljs-keyword">const</span> footer = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createFooter</span>({
+    <span class="hljs-attr">sections</span>: [
+      {
+        <span class="hljs-attr">title</span>: <span class="hljs-string">'Company'</span>,
+        <span class="hljs-attr">links</span>: [
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'About Us'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/about'</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Careers'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/careers'</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Press'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/press'</span> }
+        ]
+      },
+      {
+        <span class="hljs-attr">title</span>: <span class="hljs-string">'Support'</span>,
+        <span class="hljs-attr">links</span>: [
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Help Center'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/help'</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Contact Us'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/contact'</span> },
+          { <span class="hljs-attr">text</span>: <span class="hljs-string">'Returns'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/returns'</span> }
+        ]
+      }
+    ],
+    <span class="hljs-attr">social</span>: [
+      { <span class="hljs-attr">platform</span>: <span class="hljs-string">'facebook'</span>, <span class="hljs-attr">url</span>: <span class="hljs-string">'https://facebook.com/shophero'</span> },
+      { <span class="hljs-attr">platform</span>: <span class="hljs-string">'twitter'</span>, <span class="hljs-attr">url</span>: <span class="hljs-string">'https://twitter.com/shophero'</span> },
+      { <span class="hljs-attr">platform</span>: <span class="hljs-string">'instagram'</span>, <span class="hljs-attr">url</span>: <span class="hljs-string">'https://instagram.com/shophero'</span> }
+    ]
+  });
+
+  <span class="hljs-comment">// Combine into page template</span>
+  <span class="hljs-keyword">const</span> page = <span class="hljs-keyword">await</span> client.<span class="hljs-property">templates</span>.<span class="hljs-title function_">createPage</span>({
+    <span class="hljs-attr">title</span>: <span class="hljs-string">'ShopHero - Your Online Store'</span>,
+    <span class="hljs-attr">components</span>: [header.<span class="hljs-property">id</span>, hero.<span class="hljs-property">id</span>, productGrid.<span class="hljs-property">id</span>, footer.<span class="hljs-property">id</span>],
+    <span class="hljs-attr">layout</span>: <span class="hljs-string">'default'</span>,
+    <span class="hljs-attr">meta</span>: {
+      <span class="hljs-attr">description</span>: <span class="hljs-string">'Shop amazing products at ShopHero'</span>,
+      <span class="hljs-attr">keywords</span>: [<span class="hljs-string">'ecommerce'</span>, <span class="hljs-string">'shopping'</span>, <span class="hljs-string">'products'</span>]
+    }
+  });
+
+  <span class="hljs-keyword">return</span> page;
+}
+</code></pre>
+<h3 id="2-dashboard-application">2. Dashboard Application</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Create admin dashboard</span>
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">createDashboard</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-comment">// Sidebar navigation</span>
+  <span class="hljs-keyword">const</span> sidebar = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createSidebar</span>({
+    <span class="hljs-attr">items</span>: [
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'Dashboard'</span>, <span class="hljs-attr">icon</span>: <span class="hljs-string">'dashboard'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/dashboard'</span> },
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'Users'</span>, <span class="hljs-attr">icon</span>: <span class="hljs-string">'users'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/users'</span> },
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'Products'</span>, <span class="hljs-attr">icon</span>: <span class="hljs-string">'package'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/products'</span> },
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'Orders'</span>, <span class="hljs-attr">icon</span>: <span class="hljs-string">'shopping-bag'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/orders'</span> },
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'Analytics'</span>, <span class="hljs-attr">icon</span>: <span class="hljs-string">'bar-chart'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/analytics'</span> },
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'Settings'</span>, <span class="hljs-attr">icon</span>: <span class="hljs-string">'settings'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/settings'</span> }
+    ],
+    <span class="hljs-attr">collapsible</span>: <span class="hljs-literal">true</span>
+  });
+
+  <span class="hljs-comment">// Stats cards</span>
+  <span class="hljs-keyword">const</span> statsCards = <span class="hljs-keyword">await</span> <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">all</span>([
+    client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createStatsCard</span>({
+      <span class="hljs-attr">title</span>: <span class="hljs-string">'Total Users'</span>,
+      <span class="hljs-attr">value</span>: <span class="hljs-string">'12,345'</span>,
+      <span class="hljs-attr">change</span>: <span class="hljs-string">'+12%'</span>,
+      <span class="hljs-attr">changeType</span>: <span class="hljs-string">'positive'</span>,
+      <span class="hljs-attr">icon</span>: <span class="hljs-string">'users'</span>
+    }),
+    client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createStatsCard</span>({
+      <span class="hljs-attr">title</span>: <span class="hljs-string">'Revenue'</span>,
+      <span class="hljs-attr">value</span>: <span class="hljs-string">'$45,678'</span>,
+      <span class="hljs-attr">change</span>: <span class="hljs-string">'+8%'</span>,
+      <span class="hljs-attr">changeType</span>: <span class="hljs-string">'positive'</span>,
+      <span class="hljs-attr">icon</span>: <span class="hljs-string">'dollar-sign'</span>
+    }),
+    client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createStatsCard</span>({
+      <span class="hljs-attr">title</span>: <span class="hljs-string">'Orders'</span>,
+      <span class="hljs-attr">value</span>: <span class="hljs-string">'1,234'</span>,
+      <span class="hljs-attr">change</span>: <span class="hljs-string">'-3%'</span>,
+      <span class="hljs-attr">changeType</span>: <span class="hljs-string">'negative'</span>,
+      <span class="hljs-attr">icon</span>: <span class="hljs-string">'shopping-bag'</span>
+    }),
+    client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createStatsCard</span>({
+      <span class="hljs-attr">title</span>: <span class="hljs-string">'Conversion'</span>,
+      <span class="hljs-attr">value</span>: <span class="hljs-string">'3.2%'</span>,
+      <span class="hljs-attr">change</span>: <span class="hljs-string">'+0.5%'</span>,
+      <span class="hljs-attr">changeType</span>: <span class="hljs-string">'positive'</span>,
+      <span class="hljs-attr">icon</span>: <span class="hljs-string">'trending-up'</span>
+    })
+  ]);
+
+  <span class="hljs-comment">// Charts</span>
+  <span class="hljs-keyword">const</span> salesChart = <span class="hljs-keyword">await</span> client.<span class="hljs-property">canvas</span>.<span class="hljs-title function_">createChart</span>({
+    <span class="hljs-attr">type</span>: <span class="hljs-string">'line'</span>,
+    <span class="hljs-attr">title</span>: <span class="hljs-string">'Sales Overview'</span>,
+    <span class="hljs-attr">data</span>: {
+      <span class="hljs-attr">labels</span>: [<span class="hljs-string">'Jan'</span>, <span class="hljs-string">'Feb'</span>, <span class="hljs-string">'Mar'</span>, <span class="hljs-string">'Apr'</span>, <span class="hljs-string">'May'</span>, <span class="hljs-string">'Jun'</span>],
+      <span class="hljs-attr">datasets</span>: [{
+        <span class="hljs-attr">label</span>: <span class="hljs-string">'Sales'</span>,
+        <span class="hljs-attr">data</span>: [<span class="hljs-number">12000</span>, <span class="hljs-number">15000</span>, <span class="hljs-number">13000</span>, <span class="hljs-number">17000</span>, <span class="hljs-number">16000</span>, <span class="hljs-number">19000</span>],
+        <span class="hljs-attr">borderColor</span>: <span class="hljs-string">'#3b82f6'</span>,
+        <span class="hljs-attr">backgroundColor</span>: <span class="hljs-string">'rgba(59, 130, 246, 0.1)'</span>
+      }]
+    }
+  });
+
+  <span class="hljs-comment">// Data table</span>
+  <span class="hljs-keyword">const</span> usersTable = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createTable</span>({
+    <span class="hljs-attr">columns</span>: [
+      { <span class="hljs-attr">key</span>: <span class="hljs-string">'name'</span>, <span class="hljs-attr">title</span>: <span class="hljs-string">'Name'</span>, <span class="hljs-attr">sortable</span>: <span class="hljs-literal">true</span> },
+      { <span class="hljs-attr">key</span>: <span class="hljs-string">'email'</span>, <span class="hljs-attr">title</span>: <span class="hljs-string">'Email'</span>, <span class="hljs-attr">sortable</span>: <span class="hljs-literal">true</span> },
+      { <span class="hljs-attr">key</span>: <span class="hljs-string">'role'</span>, <span class="hljs-attr">title</span>: <span class="hljs-string">'Role'</span>, <span class="hljs-attr">sortable</span>: <span class="hljs-literal">false</span> },
+      { <span class="hljs-attr">key</span>: <span class="hljs-string">'status'</span>, <span class="hljs-attr">title</span>: <span class="hljs-string">'Status'</span>, <span class="hljs-attr">sortable</span>: <span class="hljs-literal">true</span> },
+      { <span class="hljs-attr">key</span>: <span class="hljs-string">'actions'</span>, <span class="hljs-attr">title</span>: <span class="hljs-string">'Actions'</span>, <span class="hljs-attr">sortable</span>: <span class="hljs-literal">false</span> }
+    ],
+    <span class="hljs-attr">data</span>: [
+      {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'John Doe'</span>,
+        <span class="hljs-attr">email</span>: <span class="hljs-string">'john@example.com'</span>,
+        <span class="hljs-attr">role</span>: <span class="hljs-string">'Admin'</span>,
+        <span class="hljs-attr">status</span>: <span class="hljs-string">'Active'</span>,
+        <span class="hljs-attr">actions</span>: <span class="hljs-string">'&lt;button&gt;Edit&lt;/button&gt;&lt;button&gt;Delete&lt;/button&gt;'</span>
+      }
+      <span class="hljs-comment">// ... more data</span>
+    ],
+    <span class="hljs-attr">pagination</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">pageSize</span>: <span class="hljs-number">10</span>
+  });
+
+  <span class="hljs-keyword">return</span> {
+    sidebar,
+    statsCards,
+    salesChart,
+    usersTable
+  };
+}
+</code></pre>
+<h3 id="3-blog-platform">3. Blog Platform</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Create blog platform</span>
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">createBlogPlatform</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-comment">// Blog header</span>
+  <span class="hljs-keyword">const</span> blogHeader = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createHeader</span>({
+    <span class="hljs-attr">title</span>: <span class="hljs-string">'TechBlog'</span>,
+    <span class="hljs-attr">subtitle</span>: <span class="hljs-string">'Insights and tutorials for developers'</span>,
+    <span class="hljs-attr">navigation</span>: [
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'Home'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/'</span> },
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'Articles'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/articles'</span> },
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'Categories'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/categories'</span> },
+      { <span class="hljs-attr">text</span>: <span class="hljs-string">'About'</span>, <span class="hljs-attr">href</span>: <span class="hljs-string">'/about'</span> }
+    ],
+    <span class="hljs-attr">search</span>: {
+      <span class="hljs-attr">placeholder</span>: <span class="hljs-string">'Search articles...'</span>,
+      <span class="hljs-attr">action</span>: <span class="hljs-string">'/search'</span>
+    }
+  });
+
+  <span class="hljs-comment">// Article card</span>
+  <span class="hljs-keyword">const</span> articleCard = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createArticleCard</span>({
+    <span class="hljs-attr">title</span>: <span class="hljs-string">'Getting Started with HeroUI MCP Server'</span>,
+    <span class="hljs-attr">excerpt</span>: <span class="hljs-string">'Learn how to build amazing UI components with HeroUI...'</span>,
+    <span class="hljs-attr">author</span>: {
+      <span class="hljs-attr">name</span>: <span class="hljs-string">'Jane Developer'</span>,
+      <span class="hljs-attr">avatar</span>: <span class="hljs-string">'/avatars/jane.jpg'</span>,
+      <span class="hljs-attr">bio</span>: <span class="hljs-string">'Senior Frontend Developer'</span>
+    },
+    <span class="hljs-attr">publishDate</span>: <span class="hljs-string">'2024-11-08'</span>,
+    <span class="hljs-attr">readTime</span>: <span class="hljs-string">'5 min read'</span>,
+    <span class="hljs-attr">tags</span>: [<span class="hljs-string">'heroui'</span>, <span class="hljs-string">'mcp'</span>, <span class="hljs-string">'typescript'</span>],
+    <span class="hljs-attr">image</span>: <span class="hljs-string">'/articles/heroui-intro.jpg'</span>
+  });
+
+  <span class="hljs-comment">// Article content</span>
+  <span class="hljs-keyword">const</span> articleContent = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createArticleContent</span>({
+    <span class="hljs-attr">title</span>: <span class="hljs-string">'Getting Started with HeroUI MCP Server'</span>,
+    <span class="hljs-attr">content</span>: <span class="hljs-string">`
+      # Introduction
+
+      HeroUI MCP Server is a powerful tool for creating UI components...
+
+      ## Installation
+
+      \`\`\`bash
+      npm install heroui-mcp-server
+      \`\`\`
+
+      ## Basic Usage
+
+      \`\`\`typescript
+      const client = new HeroUIClient();
+      const button = await client.components.createButton({
+        text: 'Hello World'
+      });
+      \`\`\`
+    `</span>,
+    <span class="hljs-attr">toc</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">syntax</span>: <span class="hljs-string">'markdown'</span>
+  });
+
+  <span class="hljs-comment">// Comments section</span>
+  <span class="hljs-keyword">const</span> comments = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createComments</span>({
+    <span class="hljs-attr">articleId</span>: <span class="hljs-string">'article-123'</span>,
+    <span class="hljs-attr">allowReplies</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">moderation</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">loginRequired</span>: <span class="hljs-literal">false</span>
+  });
+
+  <span class="hljs-keyword">return</span> {
+    blogHeader,
+    articleCard,
+    articleContent,
+    comments
+  };
+}
+</code></pre>
+<h2 id="performance-tips">Performance Tips</h2>
+<h3 id="1-caching-components">1. Caching Components</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Cache frequently used components</span>
+<span class="hljs-keyword">const</span> cachedButton = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createButton</span>({
+  <span class="hljs-attr">text</span>: <span class="hljs-string">'Cached Button'</span>,
+  <span class="hljs-attr">cache</span>: {
+    <span class="hljs-attr">key</span>: <span class="hljs-string">'primary-button'</span>,
+    <span class="hljs-attr">ttl</span>: <span class="hljs-number">3600</span> <span class="hljs-comment">// 1 hour</span>
+  }
+});
+</code></pre>
+<h3 id="2-batch-operations">2. Batch Operations</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Create multiple components in batch</span>
+<span class="hljs-keyword">const</span> components = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createBatch</span>([
+  { <span class="hljs-attr">type</span>: <span class="hljs-string">'button'</span>, <span class="hljs-attr">props</span>: { <span class="hljs-attr">text</span>: <span class="hljs-string">'Button 1'</span> } },
+  { <span class="hljs-attr">type</span>: <span class="hljs-string">'button'</span>, <span class="hljs-attr">props</span>: { <span class="hljs-attr">text</span>: <span class="hljs-string">'Button 2'</span> } },
+  { <span class="hljs-attr">type</span>: <span class="hljs-string">'card'</span>, <span class="hljs-attr">props</span>: { <span class="hljs-attr">title</span>: <span class="hljs-string">'Card 1'</span> } }
+]);
+</code></pre>
+<h3 id="3-lazy-loading">3. Lazy Loading</h3>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Lazy load components</span>
+<span class="hljs-keyword">const</span> lazyComponent = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">createLazy</span>({
+  <span class="hljs-attr">type</span>: <span class="hljs-string">'heavy-component'</span>,
+  <span class="hljs-attr">placeholder</span>: <span class="hljs-string">'&lt;div&gt;Loading...&lt;/div&gt;'</span>,
+  <span class="hljs-attr">trigger</span>: <span class="hljs-string">'viewport'</span> <span class="hljs-comment">// Load when in viewport</span>
+});
+</code></pre>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<ol>
+<li><p><strong>Component not rendering</strong></p>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Check if component exists</span>
+<span class="hljs-keyword">const</span> exists = <span class="hljs-keyword">await</span> client.<span class="hljs-property">components</span>.<span class="hljs-title function_">exists</span>(<span class="hljs-string">'component-id'</span>);
+<span class="hljs-keyword">if</span> (!exists) {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">'Component not found'</span>);
+}
+</code></pre>
+</li>
+<li><p><strong>Theme not applying</strong></p>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Force theme refresh</span>
+<span class="hljs-keyword">await</span> client.<span class="hljs-property">theme</span>.<span class="hljs-title function_">refresh</span>();
+</code></pre>
+</li>
+<li><p><strong>Memory issues</strong></p>
+<pre><code class="lang-typescript"><span class="hljs-comment">// Clear cache</span>
+<span class="hljs-keyword">await</span> client.<span class="hljs-property">cache</span>.<span class="hljs-title function_">clear</span>();
+
+<span class="hljs-comment">// Optimize memory</span>
+<span class="hljs-keyword">await</span> client.<span class="hljs-property">memory</span>.<span class="hljs-title function_">optimize</span>();
+</code></pre>
+</li>
+</ol>
+<p>สำหรับตัวอย่างเพิ่มเติม โปรดดูที่ <a href="../examples">examples/</a> directory ในโปรเจ้ค</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="api/templates.md" class="navigation navigation-prev " aria-label="Previous page: Templates">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="best-practices.html" class="navigation navigation-next " aria-label="Next page: Best Practices">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Examples","level":"4.1","depth":1,"next":{"title":"Best Practices","level":"4.2","depth":1,"path":"docs/best-practices.md","ref":"docs/best-practices.md","articles":[]},"previous":{"title":"Templates","level":"3.7","depth":1,"path":"docs/api/templates.md","ref":"docs/api/templates.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"HeroUI Team","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HeroUI MCP Server Documentation","language":"th","gitbook":"*","description":"Complete guide for HeroUI MCP Server"},"file":{"path":"docs/EXAMPLES.md","mtime":"2025-11-08T12:02:41.089Z","type":"markdown"},"gitbook":{"version":"6.1.4","time":"2025-11-08T12:13:47.920Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
