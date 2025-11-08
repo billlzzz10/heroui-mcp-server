@@ -15,6 +15,7 @@
 * [Canvas API](docs/api/canvas.md)
 * [Advanced Tools](docs/api/advanced.md)
 * [Templates](docs/api/templates.md)
+* [MindMap API](docs/api/mindmap.md)
 
 ## Guides
 * [Examples](docs/EXAMPLES.md)

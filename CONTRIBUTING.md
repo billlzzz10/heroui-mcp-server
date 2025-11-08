@@ -415,8 +415,7 @@ export function createComponent(
 
 - **GitHub Issues**: Bug reports และ feature requests
 - **GitHub Discussions**: General discussions และ Q&A
-- **Discord**: Real-time chat และ community support
-- **Twitter**: Updates และ announcements
+- **Email**: billlzzz10@gmail.com สำหรับการติดต่อโดยตรง
 
 ### Getting Help
 
@@ -424,6 +423,7 @@ export function createComponent(
 2. **Search existing issues** - อาจมีคำตอบแล้ว
 3. **Ask in discussions** - สำหรับคำถามทั่วไป
 4. **Create issue** - สำหรับ bugs หรือ feature requests
+5. **Email maintainer** - billlzzz10@gmail.com
 
 ### Recognition
 

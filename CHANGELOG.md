@@ -17,6 +17,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Template system
 - Memory management
 - Object storage system
+- **MindMap System**: Markdown ↔ Outline ↔ MindMap conversion
+- **HERO_CMP_17**: Interactive MindMap component
+- **HERO_ADV_12**: Markdown parser and converter
 
 ### Changed
 - N/A
@@ -37,7 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - 🎉 Initial release of HeroUI MCP Server
-- 🎨 16 UI Components (HERO_CMP_01 to HERO_CMP_16)
+- 🎨 17 UI Components (HERO_CMP_01 to HERO_CMP_17)
   - Button components with multiple variants
   - Input components with validation
   - Card components with flexible layouts
@@ -54,6 +57,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Tooltip components
   - Dropdown components
   - Accordion components
+  - **Interactive MindMap components**
 
 - 🏗️ 5 Layout Systems (HERO_LAY_01 to HERO_LAY_05)
   - Grid layout system with responsive support
@@ -76,7 +80,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Animation tools
   - Export utilities
 
-- 🔧 11 Advanced Tools (HERO_ADV_01 to HERO_ADV_11)
+- 🔧 12 Advanced Tools (HERO_ADV_01 to HERO_ADV_12)
   - Animation system
   - State management
   - Event handling
@@ -88,6 +92,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Analytics integration
   - SEO optimization
   - PWA support
+  - **Markdown to MindMap converter**
 
 - 📄 6 Template Systems (HERO_TPL_01 to HERO_TPL_06)
   - Page templates

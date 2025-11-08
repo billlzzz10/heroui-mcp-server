@@ -56,19 +56,19 @@
     "frontend-tools"
   ],
   "author": {
-    "name": "HeroUI Team",
-    "email": "team@heroui.dev",
-    "url": "https://heroui.dev"
+    "name": "billlzzz10",
+    "email": "billlzzz10@gmail.com",
+    "url": "https://github.com/billlzzz10"
   },
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroui/mcp-server.git"
+    "url": "https://github.com/billlzzz10/heroui-mcp-server.git"
   },
   "bugs": {
-    "url": "https://github.com/heroui/mcp-server/issues"
+    "url": "https://github.com/billlzzz10/heroui-mcp-server/issues"
   },
-  "homepage": "https://heroui.dev",
+  "homepage": "https://github.com/billlzzz10/heroui-mcp-server",
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=8.0.0"

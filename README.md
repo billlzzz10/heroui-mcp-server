@@ -22,8 +22,9 @@
 - **Canvas**: เครื่องมือสำหรับการวาดและแสดงผล (6 canvas tools)
 
 ### 🔧 Advanced Features
-- **Advanced Tools**: เครื่องมือขั้นสูง (11 tools)
+- **Advanced Tools**: เครื่องมือขั้นสูง (12 tools)
 - **Templates**: เทมเพลตสำเร็จรูป (6 templates)
+- **MindMap System**: ระบบแปลง Markdown ↔ Outline ↔ MindMap
 - **Memory Management**: ระบบจัดการหน่วยความจำ
 - **Object Storage**: ระบบจัดเก็บข้อมูล
 
@@ -258,8 +259,10 @@ npm test
 
 หากมีคำถามหรือข้อเสนอแนะ สามารถติดต่อได้ที่:
 
-- GitHub Issues: [Create an issue](../../issues)
-- Email: [your-email@example.com]
+- **GitHub Issues**: [Create an issue](https://github.com/billlzzz10/heroui-mcp-server/issues)
+- **Email**: billlzzz10@gmail.com
+- **GitHub**: [@billlzzz10](https://github.com/billlzzz10)
+- **Repository**: https://github.com/billlzzz10/heroui-mcp-server
 
 ---
 

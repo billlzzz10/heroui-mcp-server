@@ -200,6 +200,106 @@ POST /canvas/{canvasId}/shape
 }
 ```
 
+## MindMap API
+
+### Parse Markdown (HERO_ADV_12)
+
+#### Parse Markdown to Outline
+```typescript
+POST /markdown/parse
+
+// Request Body
+{
+  "markdown": "# Project\n## Tasks\n- [ ] Setup\n- [x] Done"
+}
+
+// Response
+{
+  "id": "outline_123",
+  "title": "Project",
+  "sections": [
+    {
+      "id": "s1",
+      "headingLevel": 2,
+      "title": "Tasks",
+      "tasks": [
+        {
+          "id": "t1",
+          "content": "Setup",
+          "status": "todo"
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### Convert Between Formats
+```typescript
+POST /convert
+
+// Request Body
+{
+  "fromFormat": "outline",
+  "toFormat": "mindmap",
+  "payload": {
+    "id": "outline_123",
+    "title": "Project",
+    "sections": [...]
+  }
+}
+
+// Response
+{
+  "format": "mindmap",
+  "result": {
+    "id": "mindmap_123",
+    "nodes": [
+      {
+        "id": "root",
+        "parentId": null,
+        "title": "Project",
+        "role": "concept"
+      }
+    ]
+  }
+}
+```
+
+### Create MindMap Component (HERO_CMP_17)
+
+#### Create Interactive MindMap
+```typescript
+POST /components/mindmap
+
+// Request Body
+{
+  "nodes": [
+    {
+      "id": "root",
+      "parentId": null,
+      "title": "Project Alpha",
+      "role": "concept"
+    },
+    {
+      "id": "tasks",
+      "parentId": "root",
+      "title": "Tasks",
+      "role": "concept"
+    }
+  ],
+  "layout": "tree-right"
+}
+
+// Response
+{
+  "id": "mindmap_component_123",
+  "html": "<div class='hero-mindmap'>...</div>",
+  "css": ".hero-mindmap { ... }",
+  "js": "// Interactive mindmap logic"
+}
+```
+
 ## Advanced Tools API
 
 ### Animation (HERO_ADV_01)
