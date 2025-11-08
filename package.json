@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "🚀 HeroUI MCP Server - A Model Context Protocol server for creating and managing UI components efficiently",
-  "main": "dist/server/index.js",
+  "module": "dist/server/index.js",
   "types": "dist/server/index.d.ts",
   "bin": {
     "heroui-mcp-server": "dist/server/index.js",
