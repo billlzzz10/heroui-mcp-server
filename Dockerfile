@@ -6,21 +6,6 @@ FROM node:18-alpine AS base
 # Set working directory
 WORKDIR /app
 
-# Install system dependencies for canvas and sharp
-RUN apk add --no-cache \
-    cairo-dev \
-    jpeg-dev \
-    pango-dev \
-    musl-dev \
-    giflib-dev \
-    pixman-dev \
-    pangomm-dev \
-    libjpeg-turbo-dev \
-    freetype-dev \
-    python3 \
-    make \
-    g++
-
 # Copy package files
 COPY package*.json ./
 
@@ -56,18 +41,6 @@ RUN npm run build
 
 # Production stage
 FROM node:18-alpine AS production
-
-# Install system dependencies for runtime
-RUN apk add --no-cache \
-    cairo \
-    jpeg \
-    pango \
-    musl \
-    giflib \
-    pixman \
-    pangomm \
-    libjpeg-turbo \
-    freetype
 
 # Create app directory
 WORKDIR /app
